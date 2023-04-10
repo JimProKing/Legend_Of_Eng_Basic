@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "399564176676",
+    "project_id": "legendofenglishbasic",
+    "storage_bucket": "legendofenglishbasic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399564176676:android:348ea039497ef9f07e07b1",
+        "android_client_info": {
+          "package_name": "com.mycompany.helloflutterflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399564176676-cp6h0dlf6o3o9ped543qi4ivhs5b3onp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5ggFHbgW0koMDHpvjKYSo7IOE2uvtO3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399564176676-cp6h0dlf6o3o9ped543qi4ivhs5b3onp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399564176676-ktkb92nvnoachpqh377l8idbrkqv4btr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.helloflutterflow"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,3 @@
+NSCameraUsageDescription = "To take your photo this app requires permission to access the camera.";
+PermissionGroupNotification = "To take alarm this app requires permission to access the Notification.";
+NSMicrophoneUsageDescription = "To take your voice this app requires permission to access the microphone.";
