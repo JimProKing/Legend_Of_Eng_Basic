@@ -304,12 +304,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'howToUseContent',
-          path: '/howToUseContent',
+          name: 'StordedWords',
+          path: '/stordedWords',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'StordedWords')
+              : NavBarPage(
+                  initialPage: 'StordedWords',
+                  page: StordedWordsWidget(
+                    wordDay: params.getParam('wordDay', ParamType.String),
+                    wd: params.getParam('wd', ParamType.int),
+                  ),
+                ),
+        ),
+        FFRoute(
+          name: 'HTUContent',
+          path: '/hTUContent',
           builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: HowToUseContentWidget(
-              level: params.getParam('level', ParamType.int),
+            page: HTUContentWidget(
+              dayNo: params.getParam('dayNo', ParamType.String),
             ),
           ),
         )

@@ -30,7 +30,6 @@ class _WordWidgetState extends State<WordWidget> {
     _model = createModel(context, () => WordModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Word'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -191,10 +190,6 @@ class _WordWidgetState extends State<WordWidget> {
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
-                                    hoverColor:
-                                        FlutterFlowTheme.of(context).black600,
-                                    hoverTextColor:
-                                        FlutterFlowTheme.of(context).lineColor,
                                   ),
                                 ),
                               ),

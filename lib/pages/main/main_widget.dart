@@ -28,7 +28,6 @@ class _MainWidgetState extends State<MainWidget> {
     _model = createModel(context, () => MainModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Main'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

@@ -25,5 +25,5 @@ export '/grammer/got/got_widget.dart' show GotWidget;
 export '/listening/lot/lot_widget.dart' show LotWidget;
 export '/word/wexam/wexam_widget.dart' show WexamWidget;
 export '/word/word_greet/word_greet_widget.dart' show WordGreetWidget;
-export '/how_to/how_to_use_content/how_to_use_content_widget.dart'
-    show HowToUseContentWidget;
+export '/word/storded_words/storded_words_widget.dart' show StordedWordsWidget;
+export '/how_to/h_t_u_content/h_t_u_content_widget.dart' show HTUContentWidget;

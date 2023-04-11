@@ -356,6 +356,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ja': '',
       'zh_Hans': '',
     },
+    '0ivqzkmk': {
+      'ko': '사용방법',
+      'en': '',
+      'ja': '',
+      'zh_Hans': '',
+    },
     'g5v7bx6v': {
       'ko': '공부방법',
       'en': '',
@@ -369,7 +375,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '',
     },
     'v8y8lo7u': {
-      'ko': '커리큘럼',
+      'ko': '영어의전설 시리즈',
       'en': '',
       'ja': '',
       'zh_Hans': '',
@@ -1202,7 +1208,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p9r2itmb': {
       'ko':
-          '\"민수가 밥을 먹는다\" -> \"민수가 먹는다 밥을\"\n\n 모든 언어는, 그 민족이 중요하다고 여기는 것이 더 앞에 나옵니다. \"민수가 영희를 좋아한다\"라는 상황이 있을 때, 한국인들은 민수와 영희의 관계에 초점을 맞추는 반면, 영어권 나라의 사람들은 \"민수가 누군가에게 좋아하는 감정을 느끼고 있다\"는 것에 초점을 맞춥니다.\n\n 모든 문장은 결국 이야기입니다. 머릿속에 있는 어떤 내용을 상대방에게 전달하기 위해 문장을 만들고, 그 문장이 모여 문단이 됩니다.\n\n한국인들이 알고있는 문법은, 일본이 정리해둔 영어를 가져와 번역을 한 \'성문종합영어\'에 기반을 둡니다. 너무 오래되기도 했고, 엄밀함에는 장점이 있을 수 있지만 영어 독해에 있어서는 오히려 걸림돌이 되기도 하지요. \n\n 간단한 회화가 목적이거나, 영어로 된 글을 듣고 읽을때 내용 이해에 초점을 두시는 분들은 본 어플에서 다루는 문법만을 알아도 충분합니다. 하지만, 더 자세한 문법을 공부하고 싶으시다면 \'문법편\'도 같이 공부하시는 것도 추천드립니다.',
+          '\"민수가 밥을 먹는다\" -> \"민수가 먹는다 밥을\"\n\"Minsu eat rice.\"\n\n 모든 언어는, 그 민족이 중요하다고 여기는 것이 먼저 나옵니다. \"민수가 영희를 좋아한다\"라는 문장 있을 때, 한국인들은 민수와 영희의 관계에 초점을 맞추는 반면, 영어권 나라의 사람들은 \"민수가 누군가에게 좋아하는 감정을 느끼고 있다\"는 것에 초점을 맞춥니다.\n(동사에 초점을 둡니다.)\n\n 모든 문장은 결국 이야기입니다. 머릿속에 있는 어떤 내용을 상대방에게 전달하기 위해 문장을 만들고, 그 문장이 모여 문단이 됩니다.\n\n한국인들이 알고있는 문법은, 일본이 정리해둔 영어를 가져와 번역을 한 \'성문종합영어\'에 기반을 둡니다. 너무 오래되기도 했고, 엄밀함에는 장점이 있을 수 있지만 영어 독해에 있어서는 오히려 걸림돌이 되기도 하지요. \n\n 간단한 회화가 목적이거나, 영어로 된 글을 듣고 읽기 위한 \'내용 이해\'에 초점을 두시는 분들은 본 어플에서 다루는 문법만을 알아도 충분합니다. 하지만, 더 자세한 문법을 공부하고 싶으시다면 \'문법편\'도 같이 공부하시는 것도 추천드립니다.',
       'en': '',
       'ja': '',
       'zh_Hans': '',
@@ -1260,7 +1266,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3o3gw9ac': {
       'ko':
-          '문장에서 핵심은 \'동사\' 입니다.\n동사의 성질에 따라 필요한 요소들이 정해집니다.\n\n우리는 한글을 이미 사용할 수 있기 때문에 각각의 동사들이 어떤 요소들을 필요로 하는지 생각해보는 습관을 가진다면 문장을 구성하는 실력이 향상될 것입니다.\n\n1~5형식을 함께 공부해봅시다!',
+          '문장에서 핵심은 \'동사\' 입니다.\n동사의 성질에 따라 필요한 요소들이 정해집니다.\n\n우리는 한글을 이미 사용할 수 있기 때문에, 각각의 동사들이 어떤 요소들을 필요로 하는지 생각해보는 습관을 가진다면 문장을 구성하는 실력이 향상될 것입니다.\n\n1~5형식을 함께 공부해봅시다!',
       'en': '',
       'ja': '',
       'zh_Hans': '',
@@ -1382,14 +1388,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3q182btt': {
       'ko':
-          '그녀는 그 책을 지루하다고 생각했다.\nShe thought the book was boring.\n\n나는 그 문제를 어렵다고 느꼈다. \nI felt the problem was difficult.\n\n우리는 그 노래를 아름답다고 생각한다.\n We think the song is beautiful.\n\n그들은 그 계획을 위험하다고 판단했다. \nThey judged the plan as risky.\n\n나는 그것을 불가능하다고 생각하지 않는다.\nI don\'t think it is impossible.',
+          '그녀는 그 책을 지루하다고 생각했다.\nShe thought the book boring.\n\n나는 그 문제를 어렵다고 느꼈다. \nI felt the problem difficult.\n\n우리는 그 노래를 아름답다고 생각한다.\n We think the song beautiful.\n\n그들은 그 계획을 위험하다고 판단했다. \nThey judged the plan risky.\n\n나는 그것을 불가능하다고 생각하지 않는다.\nI don\'t think it impossible.',
       'en': '',
       'ja': '',
       'zh_Hans': '',
     },
     'x5k9ii14': {
       'ko':
-          '* \'생각하다\' 같은 경우, \'무엇을\' \'어떻게\' 생각하는지가 있어야겠죠? 가령, \"나는 철수를 잘생겼다고 생각한다.\"의 경우, (나, 철수, 잘생겼다) 의 세가지를 필요로 하네요.\n\n 이렇게 목적어에 대한 보충설명을 필요로 하는 동사를 5형식 동사라고 해요!',
+          '* \'생각하다\' 같은 경우, \'무엇을\' \'어떻게\' 생각하는지가 있어야겠죠? 가령, \"나는 철수를 잘생겼다고 생각한다.\"의 경우, (나, 철수, 잘생겼다) 의 세가지를 필요로 하네요.\n\n 이렇게 목적어에 대한 보충설명을 필요로 하는 동사를 \'5형식 동사\'라고 해요!',
       'en': '',
       'ja': '',
       'zh_Hans': '',
@@ -1619,6 +1625,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ja': '',
       'zh_Hans': '',
     },
+    '5vnwhe4k': {
+      'ko':
+          '* 접속사들을 정리해서 연습하거나 암기하는 것은 상위 레벨에서 시도하셔도 충분합니다.접속사를 자유자재로 활용하고 이해할 수 있다는 것은 이미 기본편을 볼 레벨이 아닙니다.\n\n 접속사 활용에 대해서는 상위버전에서 제대로 익히고 기본편에서는 구조와 틀을 이해하는 데 초점을 맞추시길 바랍니다.',
+      'en': '',
+      'ja': '',
+      'zh_Hans': '',
+    },
     'qd2kk8uv': {
       'ko': 'finish',
       'en': '',
@@ -1677,6 +1690,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8ez795wq': {
       'ko': '영어 듣기 기본기',
+      'en': '',
+      'ja': '',
+      'zh_Hans': '',
+    },
+    'sfboohc8': {
+      'ko': '많이, 자주 들어주세요.',
       'en': '',
       'ja': '',
       'zh_Hans': '',
@@ -1756,196 +1775,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '',
     },
   },
-  // howToUseContent
+  // StordedWords
   {
-    'eszftjic': {
+    'gdqs84uv': {
+      'ko': '보관함',
+      'en': '',
+      'ja': '',
+      'zh_Hans': '',
+    },
+  },
+  // HTUContent
+  {
+    'lyw3md3l': {
       'ko': '사용방법',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '1lrxv7p8': {
-      'ko': '기본 문장구조',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'zcq84k1i': {
-      'ko': '구와 절',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'hjft5b56': {
-      'ko': '구는, 명사 하나와 그 명사를 수식하는 부분들이 합쳐진 부분을 의미합니다.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '0sh9r24j': {
-      'ko': '절은, 대상과 동작까지 포함된 부분까지를 의미합니다.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '7eo0oqcd': {
-      'ko':
-          '민수와 축구하는 것\nplaying soccer with minsu.\n\n빨래하는 것\ndoing laundry\n\n나는 잠자고 공부했어.\ni slept and studied.\n* i slept : 절1\n* studied : 절2 ▻ 절의 갯수와 동사의 개수는 같음.\n',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'czx6wa9g': {
-      'ko': '동사의 특징에 따른 문장 구성 변화.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '15eulhxj': {
-      'ko': '문장에서 핵심은 \'동사\' 입니다.\n동사에 따라 필요한 요소들이 정해집니다.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'yi69la5m': {
-      'ko':
-          '나는 죽는다.(O)\n\n나는 때린다.(X)\n  ▪︎누구를 떄리는지가 있어야함.\n     ‣ 나는 범죄자를 때린다.(O)\n  \n민수가 먹는다(X)\n   ▪︎뭘 먹는지가 있어야함\n     ‣ 민수가 피자를 먹는다(O)\n\n민수가 보낸다.(X)\n   ▪︎ 무엇을 누구에게 보내는지가 있어야함.\n     ‣ 민수가 보낸다 철수에게 편지를(O)',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'wjy5btw2': {
-      'ko':
-          '문장에서 핵심은 \'동사\' 입니다.\n동사의 성질에 따라 필요한 요소들이 정해집니다.\n\n우리는 한글을 이미 사용할 수 있기 때문에 각각의 동사들이 어떤 요소들을 필요로 하는지 생각해보는 습관을 가진다면 문장을 구성하는 실력이 향상될 것입니다.\n\n1~5형식을 함께 공부해봅시다!',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '2w3yj4cz': {
-      'ko': '1형식',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'yppfq8sm': {
-      'ko': '주어(주인공) + 동사(동작)',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'ynl1gqqa': {
-      'ko':
-          '나는 죽는다.\ni die.\n\n나는 운동장에 있다.\ni\'m in the playground.\n* in the playground는 부사이기에 문장성분에 포함되지 않음.\n\n나는 존재한다.\ni exist.\n\n그는 노래부른다.\nHe sings.\n\nThey dance.\n그들이 춤춘다.\n\nI swim in the river.\n나는 강에서 수영한다.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'i1dcj8gc': {
-      'ko':
-          '* on, in, around 등을 \'전치사\'라고 해요.\n이미 필요한 문장성분이 끝났음에도, 추가적으로 더 넣고싶은 말이 있을때 사용하는 단어에요.\n그렇기에 문장 성분에 포함되지 않아요.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'nx9w21so': {
-      'ko': '2형식',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'zqli7gob': {
-      'ko': '주어 + 동사 + 주격보어',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '2lcbb11l': {
-      'ko':
-          '그녀는 행복해 보인다.\nShe looks happy.\n\n그는 피곤해 보인다.\nHe seems tired.\n\n그들은 자신있게 나타났다.\nThey appear confident.\n\n음식이 맛있는 냄새 난다.\nThe food smells delicious.\n\n하늘이 어둡게 변했다.\nThe sky turned dark.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'qoaspq5g': {
-      'ko':
-          '* 주격보어는 주어를 보충설명해주는 단어에요. \n주어를 보충설명해주는 단어가 꼭 필요한 동사들을 사용할때는 문장을 이렇게 구성하면 돼요!',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'twwcx7uz': {
-      'ko': '3형식',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '306vg65d': {
-      'ko': '주어 + 동사 + 목적어',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'grms23hx': {
-      'ko':
-          '나는 사과를 먹었다. \nI ate an apple.\n\n그녀는 소설을 썼다. \nShe wrote a novel.\n\n우리는 빵을 구입했다. \nWe bought bread.\n\n그들은 집을 청소한다. \nThey clean the house.\n\n나는 영화를 본다. \nI watch a movie.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'vlx7qxd8': {
-      'ko':
-          '* 목적어는 동작의 목적이 되는 단어에요!\n\'먹다\' 의 경우, 뭘 먹었는지가 없으면 이야길가 성립될 수 없죠. 이런 단어를 \'목적어\' 라고 해요.\n* 목적어가 필요한 동사를 \'타동사\'라고 해요!',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'dlppg0s9': {
-      'ko': '4형식',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    '6pdkkab8': {
-      'ko': '주어 + 동사 + 간접 목적어 + 직접목적어',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'a6j3gv3n': {
-      'ko':
-          '나는 친구에게 선물을 줬다. \nI gave a present to my friend.\n\n그녀는 아이들에게 이야기를 해줬다. \nShe told a story to the kids.\n\n우리는 학생들에게 과제를 내려줬다. \nWe assigned homework to the students.\n\n그는 아내에게 꽃을 선물했다. \nHe gave flowers to his wife.\n\n나는 엄마에게 전화를 걸었다. \nI called my mom.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'yx1iqnhb': {
-      'ko': '* \'보내다\' 같은 동사는, 누구에게 무엇을 보내는지 필요하죠. 이런 종류의 동사를 \'수여동사\'라고 해요!',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'jsis56rg': {
-      'ko': '5형식',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    't3neg6n4': {
-      'ko': '주어 + 동사 + 목적어 + 목적격보어',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'bc1k5tjc': {
-      'ko':
-          '그녀는 그 책을 지루하다고 생각했다.\nShe thought the book was boring.\n\n나는 그 문제를 어렵다고 느꼈다. \nI felt the problem was difficult.\n\n우리는 그 노래를 아름답다고 생각한다.\n We think the song is beautiful.\n\n그들은 그 계획을 위험하다고 판단했다. \nThey judged the plan as risky.\n\n나는 그것을 불가능하다고 생각하지 않는다.\nI don\'t think it is impossible.',
-      'en': '',
-      'ja': '',
-      'zh_Hans': '',
-    },
-    'ocevnkbm': {
-      'ko':
-          '* \'생각하다\' 같은 경우, \'무엇을\' \'어떻게\' 생각하는지가 있어야겠죠? 가령, \"나는 철수를 잘생겼다고 생각한다.\"의 경우, (나, 철수, 잘생겼다) 의 세가지를 필요로 하네요.\n\n 이렇게 목적어에 대한 보충설명을 필요로 하는 동사를 5형식 동사라고 해요!',
       'en': '',
       'ja': '',
       'zh_Hans': '',
@@ -1963,19 +1805,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // payment
   {
     'ss73sg4v': {
-      'ko': '* 모든 컨텐츠를 사용하기 \n위해서는 결제가 필요합니다.',
+      'ko': '* 모든 컨텐츠 이용은 결제가 필요합니다.',
       'en': '',
       'ja': '',
       'zh_Hans': '',
     },
     'xs6c9jrm': {
-      'ko': '* 10000원 한번 결제로 평생 이용가능.',
+      'ko': '* 7,700원 한번 결제로 평생 이용가능.',
       'en': '',
       'ja': '',
       'zh_Hans': '',
     },
     'vxe591ny': {
-      'ko': '10000원',
+      'ko': '7,700원',
+      'en': '',
+      'ja': '',
+      'zh_Hans': '',
+    },
+    '96jz0dv8': {
+      'ko': ' 쿠폰번호입력',
+      'en': '',
+      'ja': '',
+      'zh_Hans': '',
+    },
+    'whh5zjct': {
+      'ko': '쿠폰',
+      'en': '',
+      'ja': '',
+      'zh_Hans': '',
+    },
+    'q4rnfem5': {
+      'ko': '* 결제시 해당 창은 사라집니다.',
       'en': '',
       'ja': '',
       'zh_Hans': '',

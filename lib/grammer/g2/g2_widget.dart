@@ -34,7 +34,6 @@ class _G2WidgetState extends State<G2Widget> {
     _model = createModel(context, () => G2Model());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'G2'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -157,7 +156,7 @@ class _G2WidgetState extends State<G2Widget> {
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 20.0, 10.0, 0.0),
+                                      0.0, 10.0, 0.0, 0.0),
                                   child: Container(
                                     width:
                                         MediaQuery.of(context).size.width * 1.0,
@@ -196,7 +195,7 @@ class _G2WidgetState extends State<G2Widget> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
-                                                            0.8,
+                                                            0.88,
                                                     height:
                                                         MediaQuery.of(context)
                                                                 .size
@@ -287,33 +286,24 @@ class _G2WidgetState extends State<G2Widget> {
                                                                   ),
                                                             ),
                                                           ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        10.0,
-                                                                        0.0,
-                                                                        10.0,
-                                                                        0.0),
-                                                            child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'e89yvr7v' /* 위의 문장은, 내가 현재 드럼을 치고 있다는 의미가 아... */,
-                                                              ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Roboto Mono',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .black600,
-                                                                    fontSize:
-                                                                        12.0,
-                                                                  ),
+                                                          Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'e89yvr7v' /* 위의 문장은, 내가 현재 드럼을 치고 있다는 의미가 아... */,
                                                             ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Roboto Mono',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .black600,
+                                                                  fontSize:
+                                                                      12.0,
+                                                                ),
                                                           ),
                                                         ],
                                                       ),

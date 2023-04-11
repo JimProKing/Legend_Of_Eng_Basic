@@ -35,7 +35,6 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
     _model = createModel(context, () => ReadingMainModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'ReadingMain'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -147,281 +146,288 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
           ),
         ),
         body: SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Divider(
-                      height: 5.0,
-                      thickness: 50.0,
-                      color: Color(0xFFE7CFCF),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                10.0, 20.0, 10.0, 0.0),
-                            child: Container(
-                              width: MediaQuery.of(context).size.width * 1.0,
-                              height: MediaQuery.of(context).size.height * 0.65,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFEFCED),
-                                borderRadius: BorderRadius.circular(20.0),
-                                border: Border.all(
-                                  color: Color(0xA9D1A7A7),
-                                  width: 3.0,
-                                ),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 10.0, 0.0, 0.0),
-                                child: FutureBuilder<List<ReadingTableRow>>(
-                                  future: ReadingTableTable().queryRows(
-                                    queryFn: (q) => q
-                                        .eq(
-                                          'day',
-                                          widget.level,
-                                        )
-                                        .neq(
-                                          'ENG',
-                                          'n',
-                                        )
-                                        .order('pkno', ascending: true),
-                                    limit: 50,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Divider(
+                        height: 5.0,
+                        thickness: 50.0,
+                        color: Color(0xFFE7CFCF),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 10.0, 0.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10.0, 20.0, 10.0, 0.0),
+                              child: Container(
+                                width: MediaQuery.of(context).size.width * 1.0,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.65,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFFEFCED),
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  border: Border.all(
+                                    color: Color(0xA9D1A7A7),
+                                    width: 3.0,
                                   ),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return Center(
-                                        child: SizedBox(
-                                          width: 35.0,
-                                          height: 35.0,
-                                          child: SpinKitFoldingCube(
-                                            color: Color(0xC1D1A7A7),
-                                            size: 35.0,
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 0.0, 0.0),
+                                  child: FutureBuilder<List<ReadingTableRow>>(
+                                    future: ReadingTableTable().queryRows(
+                                      queryFn: (q) => q
+                                          .eq(
+                                            'day',
+                                            widget.level,
+                                          )
+                                          .neq(
+                                            'ENG',
+                                            'n',
+                                          )
+                                          .order('pkno', ascending: true),
+                                      limit: 50,
+                                    ),
+                                    builder: (context, snapshot) {
+                                      // Customize what your widget looks like when it's loading.
+                                      if (!snapshot.hasData) {
+                                        return Center(
+                                          child: SizedBox(
+                                            width: 35.0,
+                                            height: 35.0,
+                                            child: SpinKitFoldingCube(
+                                              color: Color(0xC1D1A7A7),
+                                              size: 35.0,
+                                            ),
                                           ),
-                                        ),
-                                      );
-                                    }
-                                    List<ReadingTableRow>
-                                        listViewReadingTableRowList =
-                                        snapshot.data!;
-                                    return ListView.builder(
-                                      padding: EdgeInsets.zero,
-                                      shrinkWrap: true,
-                                      scrollDirection: Axis.vertical,
-                                      itemCount:
-                                          listViewReadingTableRowList.length,
-                                      itemBuilder: (context, listViewIndex) {
-                                        final listViewReadingTableRow =
-                                            listViewReadingTableRowList[
-                                                listViewIndex];
-                                        return Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 10.0),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 0.0, 0.0, 0.0),
-                                                child: Text(
-                                                  listViewReadingTableRow.eng!,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Roboto Mono',
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
-                                                ),
-                                              ),
-                                              if (!_model.onlyeng!)
+                                        );
+                                      }
+                                      List<ReadingTableRow>
+                                          listViewReadingTableRowList =
+                                          snapshot.data!;
+                                      return ListView.builder(
+                                        padding: EdgeInsets.zero,
+                                        shrinkWrap: true,
+                                        scrollDirection: Axis.vertical,
+                                        itemCount:
+                                            listViewReadingTableRowList.length,
+                                        itemBuilder: (context, listViewIndex) {
+                                          final listViewReadingTableRow =
+                                              listViewReadingTableRowList[
+                                                  listViewIndex];
+                                          return Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 10.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Text(
                                                     listViewReadingTableRow
-                                                        .kor!,
+                                                        .eng!,
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
                                                               'Roboto Mono',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .grayIcon,
-                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
                                                         ),
                                                   ),
                                                 ),
-                                            ],
-                                          ),
-                                        );
-                                      },
-                                    );
-                                  },
+                                                if (!_model.onlyeng!)
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(10.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      listViewReadingTableRow
+                                                          .kor!,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Roboto Mono',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .grayIcon,
+                                                                fontSize: 12.0,
+                                                              ),
+                                                    ),
+                                                  ),
+                                              ],
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    },
+                                  ),
                                 ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 20.0, 0.0, 60.0),
+                            child: FFButtonWidget(
+                              onPressed: FFAppState().fR.contains(widget.level)
+                                  ? null
+                                  : () async {
+                                      logFirebaseEvent(
+                                          'READING_MAIN_PAGE_FINISH_BTN_ON_TAP');
+                                      logFirebaseEvent(
+                                          'Button_update_app_state');
+                                      setState(() {
+                                        FFAppState().addToFR(widget.level);
+                                      });
+                                      logFirebaseEvent('Button_navigate_to');
+
+                                      context.pushNamed('Reading');
+                                    },
+                              text: FFLocalizations.of(context).getText(
+                                'atc7z9f4' /* finish */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 130.0,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xC1D1A7A7),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Roboto Mono',
+                                      color: FlutterFlowTheme.of(context)
+                                          .chocolateCosmos,
+                                    ),
+                                elevation: 2.0,
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                                disabledColor:
+                                    FlutterFlowTheme.of(context).lineColor,
+                                disabledTextColor: Color(0xFF57636C),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 20.0, 0.0, 60.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                logFirebaseEvent(
+                                    'READING_MAIN_PAGE_영어_BTN_ON_TAP');
+                                logFirebaseEvent('Button_update_widget_state');
+                                setState(() {
+                                  _model.onlyeng = true;
+                                });
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'lsxbshmv' /* 영어 */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 70.0,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xFFF3FCEB),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Roboto Mono',
+                                      color: Color(0xFF61686E),
+                                    ),
+                                borderSide: BorderSide(
+                                  color: Color(0xFF61686E),
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(50.0),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 20.0, 0.0, 60.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                logFirebaseEvent(
+                                    'READING_MAIN_PAGE_영한_BTN_ON_TAP');
+                                logFirebaseEvent('Button_update_widget_state');
+                                setState(() {
+                                  _model.onlyeng = false;
+                                });
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'cghxm1xi' /* 영한 */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 70.0,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xFFF3FCEB),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Roboto Mono',
+                                      color: Color(0xFF61686E),
+                                    ),
+                                borderSide: BorderSide(
+                                  color: Color(0xFF61686E),
+                                  width: 2.0,
+                                ),
+                                borderRadius: BorderRadius.circular(50.0),
                               ),
                             ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            0.0, 20.0, 0.0, 60.0),
-                        child: FFButtonWidget(
-                          onPressed: FFAppState().fR.contains(widget.level)
-                              ? null
-                              : () async {
-                                  logFirebaseEvent(
-                                      'READING_MAIN_PAGE_FINISH_BTN_ON_TAP');
-                                  logFirebaseEvent('Button_update_app_state');
-                                  setState(() {
-                                    FFAppState().addToFR(widget.level);
-                                  });
-                                  logFirebaseEvent('Button_navigate_to');
-
-                                  context.pushNamed('Reading');
-                                },
-                          text: FFLocalizations.of(context).getText(
-                            'atc7z9f4' /* finish */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 130.0,
-                            height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xC1D1A7A7),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Roboto Mono',
-                                  color: FlutterFlowTheme.of(context)
-                                      .chocolateCosmos,
-                                ),
-                            elevation: 2.0,
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                            disabledColor:
-                                FlutterFlowTheme.of(context).lineColor,
-                            disabledTextColor: Color(0xFF57636C),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            20.0, 20.0, 0.0, 60.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            logFirebaseEvent('READING_MAIN_PAGE_영어_BTN_ON_TAP');
-                            logFirebaseEvent('Button_update_widget_state');
-                            setState(() {
-                              _model.onlyeng = true;
-                            });
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'lsxbshmv' /* 영어 */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 70.0,
-                            height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFFF3FCEB),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Roboto Mono',
-                                  color: Color(0xFF61686E),
-                                ),
-                            borderSide: BorderSide(
-                              color: Color(0xFF61686E),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(50.0),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            20.0, 20.0, 0.0, 60.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            logFirebaseEvent('READING_MAIN_PAGE_영한_BTN_ON_TAP');
-                            logFirebaseEvent('Button_update_widget_state');
-                            setState(() {
-                              _model.onlyeng = false;
-                            });
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'cghxm1xi' /* 영한 */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 70.0,
-                            height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFFF3FCEB),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Roboto Mono',
-                                  color: Color(0xFF61686E),
-                                ),
-                            borderSide: BorderSide(
-                              color: Color(0xFF61686E),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(50.0),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
-                ],
-              ),
-              Divider(
-                thickness: 1.0,
-                color: FlutterFlowTheme.of(context).accent4,
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -56,6 +56,10 @@ class FFAppState extends ChangeNotifier {
     _fG4B = await secureStorage.getInt('ff_fG4B') ?? _fG4B;
     _wordTemp = await secureStorage.getString('ff_wordTemp') ?? _wordTemp;
     _payed = await secureStorage.getInt('ff_payed') ?? _payed;
+    _pknoStored = (await secureStorage.getStringList('ff_pknoStored'))
+            ?.map(int.parse)
+            .toList() ??
+        _pknoStored;
   }
 
   void update(VoidCallback callback) {
@@ -527,6 +531,36 @@ class FFAppState extends ChangeNotifier {
 
   void deletePayed() {
     secureStorage.delete(key: 'ff_payed');
+  }
+
+  List<int> _pknoStored = [];
+  List<int> get pknoStored => _pknoStored;
+  set pknoStored(List<int> _value) {
+    _pknoStored = _value;
+    secureStorage.setStringList(
+        'ff_pknoStored', _value.map((x) => x.toString()).toList());
+  }
+
+  void deletePknoStored() {
+    secureStorage.delete(key: 'ff_pknoStored');
+  }
+
+  void addToPknoStored(int _value) {
+    _pknoStored.add(_value);
+    secureStorage.setStringList(
+        'ff_pknoStored', _pknoStored.map((x) => x.toString()).toList());
+  }
+
+  void removeFromPknoStored(int _value) {
+    _pknoStored.remove(_value);
+    secureStorage.setStringList(
+        'ff_pknoStored', _pknoStored.map((x) => x.toString()).toList());
+  }
+
+  void removeAtIndexFromPknoStored(int _index) {
+    _pknoStored.removeAt(_index);
+    secureStorage.setStringList(
+        'ff_pknoStored', _pknoStored.map((x) => x.toString()).toList());
   }
 }
 

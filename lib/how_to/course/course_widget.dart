@@ -28,7 +28,6 @@ class _CourseWidgetState extends State<CourseWidget> {
     _model = createModel(context, () => CourseModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'course'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -144,6 +143,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Roboto Mono',
+                                  color: FlutterFlowTheme.of(context).black600,
                                   fontWeight: FontWeight.bold,
                                 ),
                       ),
@@ -152,8 +152,8 @@ class _CourseWidgetState extends State<CourseWidget> {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width * 0.95,
-                height: MediaQuery.of(context).size.height * 0.8,
+                width: MediaQuery.of(context).size.width * 0.9,
+                height: MediaQuery.of(context).size.height * 0.66,
                 decoration: BoxDecoration(
                   color: Color(0xFFF2F5FE),
                   borderRadius: BorderRadius.circular(20.0),
@@ -163,10 +163,10 @@ class _CourseWidgetState extends State<CourseWidget> {
                   ),
                 ),
                 child: Container(
-                  width: 100.0,
-                  height: 100.0,
+                  width: MediaQuery.of(context).size.width * 1.0,
+                  height: MediaQuery.of(context).size.height * 0.7,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                    color: FlutterFlowTheme.of(context).primaryBtnText,
                     borderRadius: BorderRadius.circular(20.0),
                     border: Border.all(
                       color: Color(0xA9D1A7A7),

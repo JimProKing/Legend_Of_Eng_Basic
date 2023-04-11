@@ -28,7 +28,6 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
     _model = createModel(context, () => HowToUseModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'howToUse'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -202,9 +201,55 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
                         ),
                       ],
                     ),
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.05),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            logFirebaseEvent('HOW_TO_USE_PAGE_사용방법_BTN_ON_TAP');
+                            logFirebaseEvent('Button_navigate_to');
+
+                            context.pushNamed('HTUContent');
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            '0ivqzkmk' /* 사용방법 */,
+                          ),
+                          options: FFButtonOptions(
+                            width: 300.0,
+                            height: 60.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: Color(0xC1D1A7A7),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Roboto Mono',
+                                  color: Colors.white,
+                                  fontSize: 24.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                            elevation: 2.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).black600,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                            hoverBorderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).black600,
+                              width: 2.0,
+                            ),
+                            hoverElevation: 2.0,
+                          ),
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'g5v7bx6v' /* 공부방법 */,
@@ -271,13 +316,13 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
                             child: FFButtonWidget(
                               onPressed: () async {
                                 logFirebaseEvent(
-                                    'HOW_TO_USE_PAGE_커리큘럼_BTN_ON_TAP');
+                                    'HOW_TO_USE_PAGE_영어의전설_시리즈_BTN_ON_TAP');
                                 logFirebaseEvent('Button_navigate_to');
 
                                 context.pushNamed('course');
                               },
                               text: FFLocalizations.of(context).getText(
-                                'v8y8lo7u' /* 커리큘럼 */,
+                                'v8y8lo7u' /* 영어의전설 시리즈 */,
                               ),
                               options: FFButtonOptions(
                                 width: 300.0,

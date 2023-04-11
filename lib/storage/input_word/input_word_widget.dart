@@ -30,7 +30,6 @@ class _InputWordWidgetState extends State<InputWordWidget> {
     _model = createModel(context, () => InputWordModel());
 
     _model.textController ??= TextEditingController();
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

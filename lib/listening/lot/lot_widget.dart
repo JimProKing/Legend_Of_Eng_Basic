@@ -27,7 +27,6 @@ class _LotWidgetState extends State<LotWidget> {
     _model = createModel(context, () => LotModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'LOT'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -174,6 +173,22 @@ class _LotWidgetState extends State<LotWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 10.0, 0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'sfboohc8' /* 많이, 자주 들어주세요. */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Roboto Mono',
+                                    color: FlutterFlowTheme.of(context).sinopia,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -185,7 +200,7 @@ class _LotWidgetState extends State<LotWidget> {
                                     fontFamily: 'Nanum Gothic',
                                     color: Color(0xFF57636C),
                                     letterSpacing: 1.0,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                   ),
                             ),
                           ),

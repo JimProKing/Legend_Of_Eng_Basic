@@ -33,7 +33,6 @@ class _GotWidgetState extends State<GotWidget> {
     _model = createModel(context, () => GotModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'GOT'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -153,7 +152,7 @@ class _GotWidgetState extends State<GotWidget> {
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 20.0, 10.0, 0.0),
+                                  0.0, 10.0, 0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 1.0,
                                 height:
@@ -190,7 +189,7 @@ class _GotWidgetState extends State<GotWidget> {
                                                 width: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.8,
+                                                    0.88,
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .height *

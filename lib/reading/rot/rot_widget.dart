@@ -27,7 +27,6 @@ class _RotWidgetState extends State<RotWidget> {
     _model = createModel(context, () => RotModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'ROT'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

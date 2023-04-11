@@ -1,5 +1,4 @@
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_audio_player.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -8,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
 import 'word_day_model.dart';
 export 'word_day_model.dart';
@@ -48,8 +48,6 @@ class _WordDayWidgetState extends State<WordDayWidget> {
         FFAppState().fwn = FFAppState().fwn + 1;
       });
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -204,6 +202,7 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                             snapshot.data!;
                         return ListView.builder(
                           padding: EdgeInsets.zero,
+                          shrinkWrap: true,
                           scrollDirection: Axis.vertical,
                           itemCount: listViewWordTableRowList.length,
                           itemBuilder: (context, listViewIndex) {
@@ -301,6 +300,8 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                                                     8.0, 6.0, 8.0, 5.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
                                               children: [
                                                 Text(
                                                   listViewWordTableRow.name!,
@@ -310,10 +311,12 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         color:
-                                                            Color(0xFF101213),
-                                                        fontSize: 20.0,
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .rosewood,
+                                                        fontSize: 24.0,
                                                         fontWeight:
-                                                            FontWeight.w500,
+                                                            FontWeight.w600,
                                                       ),
                                                 ),
                                                 Padding(
@@ -361,6 +364,9 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Roboto Mono',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .black600,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),
@@ -375,7 +381,14 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                                                         .exmeaning!,
                                                     style: FlutterFlowTheme.of(
                                                             context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Roboto Mono',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .black600,
+                                                        ),
                                                   ),
                                                 ),
                                               ],
@@ -396,67 +409,133 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                                             height: MediaQuery.of(context)
                                                     .size
                                                     .height *
-                                                0.09,
+                                                0.07,
                                             decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
+                                              color: Color(0xFFEEEEDB),
                                               borderRadius:
                                                   BorderRadius.circular(10.0),
                                               shape: BoxShape.rectangle,
                                               border: Border.all(
-                                                color: Color(0x20D1A7A7),
-                                                width: 0.5,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .black600,
+                                                width: 2.0,
                                               ),
                                             ),
-                                            child: Stack(
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
                                               children: [
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          3.0, 3.0, 3.0, 3.0),
-                                                  child: FlutterFlowAudioPlayer(
-                                                    audio: Audio.network(
-                                                      listViewWordTableRow
-                                                          .soundURL!,
-                                                      metas: Metas(
-                                                        id: 'sample3.mp3-4v7apzif',
-                                                        title:
-                                                            listViewWordTableRow
-                                                                .name,
-                                                      ),
-                                                    ),
-                                                    titleTextStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Poppins',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              lineHeight: 0.0,
-                                                            ),
-                                                    playbackDurationTextStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Poppins',
-                                                              color: Color(
-                                                                  0xFF9D9D9D),
-                                                              fontSize: 10.0,
-                                                            ),
-                                                    fillColor:
-                                                        Color(0xFFEEEEEE),
-                                                    playbackButtonColor:
-                                                        Color(0xFFB2CA6D),
-                                                    activeTrackColor:
-                                                        Color(0xFF57636C),
-                                                    elevation: 5.0,
+                                                FlutterFlowIconButton(
+                                                  borderColor:
+                                                      Color(0x00EEEEDB),
+                                                  borderRadius: 0.0,
+                                                  buttonSize: 60.0,
+                                                  fillColor: Color(0xFFEEEEDB),
+                                                  icon: Icon(
+                                                    Icons.play_arrow_rounded,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    size: 30.0,
                                                   ),
+                                                  onPressed: () async {
+                                                    logFirebaseEvent(
+                                                        'WORD_DAY_play_arrow_rounded_ICN_ON_TAP');
+                                                    logFirebaseEvent(
+                                                        'IconButton_play_sound');
+                                                    _model.soundPlayer ??=
+                                                        AudioPlayer();
+                                                    if (_model
+                                                        .soundPlayer!.playing) {
+                                                      await _model.soundPlayer!
+                                                          .stop();
+                                                    }
+                                                    _model.soundPlayer!
+                                                        .setVolume(1.0);
+                                                    await _model.soundPlayer!
+                                                        .setUrl(
+                                                            listViewWordTableRow
+                                                                .soundURL!)
+                                                        .then((_) => _model
+                                                            .soundPlayer!
+                                                            .play());
+                                                  },
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    if (!FFAppState()
+                                                        .pknoStored
+                                                        .contains(
+                                                            listViewWordTableRow
+                                                                .pkno))
+                                                      FlutterFlowIconButton(
+                                                        borderColor:
+                                                            Color(0x00EEEEDB),
+                                                        borderRadius: 30.0,
+                                                        borderWidth: 2.0,
+                                                        buttonSize: 50.0,
+                                                        fillColor:
+                                                            Color(0xFFEEEEDB),
+                                                        icon: Icon(
+                                                          Icons.favorite_border,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          size: 30.0,
+                                                        ),
+                                                        onPressed: () async {
+                                                          logFirebaseEvent(
+                                                              'WORD_DAY_PAGE_favorite_border_ICN_ON_TAP');
+                                                          logFirebaseEvent(
+                                                              'IconButton_update_app_state');
+                                                          setState(() {
+                                                            FFAppState()
+                                                                .addToPknoStored(
+                                                                    listViewWordTableRow
+                                                                        .pkno);
+                                                          });
+                                                        },
+                                                      ),
+                                                    if (FFAppState()
+                                                        .pknoStored
+                                                        .contains(
+                                                            listViewWordTableRow
+                                                                .pkno))
+                                                      FlutterFlowIconButton(
+                                                        borderColor:
+                                                            Color(0x00EEEEDB),
+                                                        borderRadius: 30.0,
+                                                        borderWidth: 2.0,
+                                                        buttonSize: 50.0,
+                                                        fillColor:
+                                                            Color(0xFFEEEEDB),
+                                                        icon: Icon(
+                                                          Icons.favorite_sharp,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          size: 30.0,
+                                                        ),
+                                                        onPressed: () async {
+                                                          logFirebaseEvent(
+                                                              'WORD_DAY_PAGE_favorite_sharp_ICN_ON_TAP');
+                                                          logFirebaseEvent(
+                                                              'IconButton_update_app_state');
+                                                          setState(() {
+                                                            FFAppState()
+                                                                .removeFromPknoStored(
+                                                                    listViewWordTableRow
+                                                                        .pkno);
+                                                          });
+                                                        },
+                                                      ),
+                                                  ],
                                                 ),
                                               ],
                                             ),

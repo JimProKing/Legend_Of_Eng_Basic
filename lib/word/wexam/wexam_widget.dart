@@ -83,8 +83,6 @@ class _WexamWidgetState extends State<WexamWidget> {
         _model.addToIdxs(random_data.randomInteger(811, 900));
       });
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -247,7 +245,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 1.0,
-                      height: MediaQuery.of(context).size.height * 0.5,
+                      height: MediaQuery.of(context).size.height * 0.6,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         boxShadow: [
@@ -259,18 +257,18 @@ class _WexamWidgetState extends State<WexamWidget> {
                         ],
                         borderRadius: BorderRadius.circular(30.0),
                       ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            20.0, 20.0, 20.0, 20.0),
-                        child: SingleChildScrollView(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              SingleChildScrollView(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    FutureBuilder<List<WordTableRow>>(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 20.0, 20.0, 20.0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Expanded(
+                                    child: FutureBuilder<List<WordTableRow>>(
                                       future: WordTableTable().queryRows(
                                         queryFn: (q) => q
                                             .eq(
@@ -312,250 +310,249 @@ class _WexamWidgetState extends State<WexamWidget> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.stretch,
                                               children: [
-                                                Card(
-                                                  clipBehavior: Clip
-                                                      .antiAliasWithSaveLayer,
-                                                  color: Color(0xFFF0F7DB),
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            20.0),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryBackground,
                                                   ),
                                                   child: Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                10.0,
-                                                                10.0,
-                                                                10.0,
-                                                                10.0),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .center,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      5.0,
-                                                                      5.0,
-                                                                      5.0,
-                                                                      5.0),
-                                                          child: Container(
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              color: Color(
-                                                                  0xFFF4F3B0),
-                                                              boxShadow: [
-                                                                BoxShadow(
-                                                                  blurRadius:
-                                                                      4.0,
-                                                                  color: Color(
-                                                                      0x33000000),
-                                                                  offset:
-                                                                      Offset(
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 10.0),
+                                                    child: Card(
+                                                      clipBehavior: Clip
+                                                          .antiAliasWithSaveLayer,
+                                                      color: Color(0xFFF0F7DB),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20.0),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    10.0,
+                                                                    10.0,
+                                                                    10.0,
+                                                                    10.0),
+                                                        child:
+                                                            SingleChildScrollView(
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5.0,
+                                                                            5.0,
+                                                                            5.0,
+                                                                            5.0),
+                                                                child:
+                                                                    Container(
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    color: Color(
+                                                                        0xFFF4F3B0),
+                                                                    boxShadow: [
+                                                                      BoxShadow(
+                                                                        blurRadius:
+                                                                            4.0,
+                                                                        color: Color(
+                                                                            0x33000000),
+                                                                        offset: Offset(
+                                                                            0.0,
+                                                                            2.0),
+                                                                      )
+                                                                    ],
+                                                                    border:
+                                                                        Border
+                                                                            .all(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .gray200,
+                                                                      width:
                                                                           0.0,
-                                                                          2.0),
-                                                                )
-                                                              ],
-                                                              border:
-                                                                  Border.all(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .gray200,
-                                                                width: 0.0,
-                                                              ),
-                                                            ),
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          5.0,
-                                                                          5.0,
-                                                                          5.0,
-                                                                          5.0),
-                                                              child: Text(
-                                                                listViewWordTableRow
-                                                                    .meaning!,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Roboto Mono',
-                                                                      fontSize:
-                                                                          18.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w600,
                                                                     ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        InputWordWidget(
-                                                          key: Key(
-                                                              'Keyclp_${listViewIndex}_of_${listViewWordTableRowList.length}'),
-                                                        ),
-                                                        if (_model.cW.contains(
-                                                            listViewWordTableRow
-                                                                .name))
-                                                          Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              '05usap7g' /* 맞았습니다! */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Roboto Mono',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .engineeringOrange,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
+                                                                  ),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5.0,
+                                                                            5.0,
+                                                                            5.0,
+                                                                            5.0),
+                                                                    child: Text(
+                                                                      listViewWordTableRow
+                                                                          .meaning!,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Roboto Mono',
+                                                                            fontSize:
+                                                                                18.0,
+                                                                            fontWeight:
+                                                                                FontWeight.w600,
+                                                                          ),
+                                                                    ),
+                                                                  ),
                                                                 ),
-                                                          ),
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      5.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: FFButtonWidget(
-                                                            onPressed: _model.cW
-                                                                    .contains(
-                                                                        listViewWordTableRow
-                                                                            .name)
-                                                                ? null
-                                                                : () async {
-                                                                    logFirebaseEvent(
-                                                                        'WEXAM_PAGE_SUBMIT_BTN_ON_TAP');
-                                                                    if (listViewWordTableRow
-                                                                            .name ==
-                                                                        FFAppState()
-                                                                            .wordTemp) {
-                                                                      logFirebaseEvent(
-                                                                          'Button_update_widget_state');
-                                                                      setState(
-                                                                          () {
-                                                                        _model.cC =
-                                                                            _model.cC! +
-                                                                                1;
-                                                                        _model.addToCW(
-                                                                            listViewWordTableRow.name!);
-                                                                      });
-                                                                      logFirebaseEvent(
-                                                                          'Button_alert_dialog');
-                                                                      await showDialog(
-                                                                        context:
-                                                                            context,
-                                                                        builder:
-                                                                            (alertDialogContext) {
-                                                                          return AlertDialog(
-                                                                            title:
-                                                                                Text('정답'),
-                                                                            content:
-                                                                                Text('정답입니다!'),
-                                                                            actions: [
-                                                                              TextButton(
-                                                                                onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                child: Text('Ok'),
-                                                                              ),
-                                                                            ],
-                                                                          );
-                                                                        },
-                                                                      );
-                                                                      return;
-                                                                    } else {
-                                                                      logFirebaseEvent(
-                                                                          'Button_alert_dialog');
-                                                                      await showDialog(
-                                                                        context:
-                                                                            context,
-                                                                        builder:
-                                                                            (alertDialogContext) {
-                                                                          return AlertDialog(
-                                                                            title:
-                                                                                Text('틀렸습니다.'),
-                                                                            content:
-                                                                                Text('다시한번 확인하세요.'),
-                                                                            actions: [
-                                                                              TextButton(
-                                                                                onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                child: Text('Ok'),
-                                                                              ),
-                                                                            ],
-                                                                          );
-                                                                        },
-                                                                      );
-                                                                      return;
-                                                                    }
-                                                                  },
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              'ctbpvixs' /* submit */,
-                                                            ),
-                                                            options:
-                                                                FFButtonOptions(
-                                                              width: 130.0,
-                                                              height: 40.0,
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              iconPadding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .teaGreen,
-                                                              textStyle:
-                                                                  FlutterFlowTheme.of(
+                                                              ),
+                                                              InputWordWidget(
+                                                                key: Key(
+                                                                    'Keyclp_${listViewIndex}_of_${listViewWordTableRowList.length}'),
+                                                              ),
+                                                              if (_model.cW.contains(
+                                                                  listViewWordTableRow
+                                                                      .name))
+                                                                Text(
+                                                                  FFLocalizations.of(
                                                                           context)
-                                                                      .titleSmall
+                                                                      .getText(
+                                                                    '05usap7g' /* 맞았습니다! */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
                                                                       .override(
                                                                         fontFamily:
                                                                             'Roboto Mono',
                                                                         color: FlutterFlowTheme.of(context)
-                                                                            .chocolateCosmos,
+                                                                            .engineeringOrange,
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
                                                                       ),
-                                                              borderSide:
-                                                                  BorderSide(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .gray600,
-                                                                width: 2.0,
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          8.0),
-                                                              disabledColor:
-                                                                  FlutterFlowTheme.of(
+                                                                ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            5.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                child:
+                                                                    FFButtonWidget(
+                                                                  onPressed: _model
+                                                                          .cW
+                                                                          .contains(
+                                                                              listViewWordTableRow.name)
+                                                                      ? null
+                                                                      : () async {
+                                                                          logFirebaseEvent(
+                                                                              'WEXAM_PAGE_SUBMIT_BTN_ON_TAP');
+                                                                          if (listViewWordTableRow.name ==
+                                                                              FFAppState().wordTemp) {
+                                                                            logFirebaseEvent('Button_update_widget_state');
+                                                                            setState(() {
+                                                                              _model.cC = _model.cC! + 1;
+                                                                              _model.addToCW(listViewWordTableRow.name!);
+                                                                            });
+                                                                            logFirebaseEvent('Button_alert_dialog');
+                                                                            await showDialog(
+                                                                              context: context,
+                                                                              builder: (alertDialogContext) {
+                                                                                return AlertDialog(
+                                                                                  title: Text('정답'),
+                                                                                  content: Text('정답입니다!'),
+                                                                                  actions: [
+                                                                                    TextButton(
+                                                                                      onPressed: () => Navigator.pop(alertDialogContext),
+                                                                                      child: Text('Ok'),
+                                                                                    ),
+                                                                                  ],
+                                                                                );
+                                                                              },
+                                                                            );
+                                                                            return;
+                                                                          } else {
+                                                                            logFirebaseEvent('Button_alert_dialog');
+                                                                            await showDialog(
+                                                                              context: context,
+                                                                              builder: (alertDialogContext) {
+                                                                                return AlertDialog(
+                                                                                  title: Text('틀렸습니다.'),
+                                                                                  content: Text('다시한번 확인하세요.'),
+                                                                                  actions: [
+                                                                                    TextButton(
+                                                                                      onPressed: () => Navigator.pop(alertDialogContext),
+                                                                                      child: Text('Ok'),
+                                                                                    ),
+                                                                                  ],
+                                                                                );
+                                                                              },
+                                                                            );
+                                                                            return;
+                                                                          }
+                                                                        },
+                                                                  text: FFLocalizations.of(
                                                                           context)
-                                                                      .secondaryText,
-                                                            ),
+                                                                      .getText(
+                                                                    'ctbpvixs' /* submit */,
+                                                                  ),
+                                                                  options:
+                                                                      FFButtonOptions(
+                                                                    width:
+                                                                        130.0,
+                                                                    height:
+                                                                        40.0,
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    iconPadding:
+                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .teaGreen,
+                                                                    textStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .titleSmall
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Roboto Mono',
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).chocolateCosmos,
+                                                                        ),
+                                                                    borderSide:
+                                                                        BorderSide(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .gray600,
+                                                                      width:
+                                                                          2.0,
+                                                                    ),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            8.0),
+                                                                    disabledColor:
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ],
                                                           ),
                                                         ),
-                                                      ],
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
@@ -565,12 +562,12 @@ class _WexamWidgetState extends State<WexamWidget> {
                                         );
                                       },
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ),
                   ),
@@ -594,14 +591,14 @@ class _WexamWidgetState extends State<WexamWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 60.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 60.0),
                       child: FFButtonWidget(
                         onPressed: FFAppState().fwns.contains(widget.wordDay)
                             ? null
                             : () async {
                                 logFirebaseEvent(
                                     'WEXAM_PAGE_FINISH_BTN_ON_TAP');
-                                if (_model.cC == 1) {
+                                if (_model.cC == 30) {
                                   logFirebaseEvent('Button_update_app_state');
                                   setState(() {
                                     FFAppState().fwn = FFAppState().fwn + 1;

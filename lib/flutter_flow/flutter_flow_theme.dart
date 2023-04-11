@@ -3,31 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:shared_preferences/shared_preferences.dart';
-
-const kThemeModeKey = '__theme_mode__';
-SharedPreferences? _prefs;
-
 abstract class FlutterFlowTheme {
-  static Future initialize() async =>
-      _prefs = await SharedPreferences.getInstance();
-  static ThemeMode get themeMode {
-    final darkMode = _prefs?.getBool(kThemeModeKey);
-    return darkMode == null
-        ? ThemeMode.system
-        : darkMode
-            ? ThemeMode.dark
-            : ThemeMode.light;
-  }
-
-  static void saveThemeMode(ThemeMode mode) => mode == ThemeMode.system
-      ? _prefs?.remove(kThemeModeKey)
-      : _prefs?.setBool(kThemeModeKey, mode == ThemeMode.dark);
-
   static FlutterFlowTheme of(BuildContext context) {
-    return Theme.of(context).brightness == Brightness.dark
-        ? DarkModeTheme()
-        : LightModeTheme();
+    return LightModeTheme();
   }
 
   @Deprecated('Use primary instead')
@@ -232,14 +210,14 @@ class ThemeTypography extends Typography {
   String get displayLargeFamily => 'Poppins';
   TextStyle get displayLarge => GoogleFonts.getFont(
         'Poppins',
-        color: theme.primaryText,
+        color: theme.black600,
         fontWeight: FontWeight.normal,
         fontSize: 57.0,
       );
   String get displayMediumFamily => 'Poppins';
   TextStyle get displayMedium => GoogleFonts.getFont(
         'Poppins',
-        color: theme.primaryText,
+        color: theme.black600,
         fontWeight: FontWeight.normal,
         fontSize: 45.0,
       );
@@ -336,56 +314,6 @@ class ThemeTypography extends Typography {
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-}
-
-class DarkModeTheme extends FlutterFlowTheme {
-  @Deprecated('Use primary instead')
-  Color get primaryColor => primary;
-  @Deprecated('Use secondary instead')
-  Color get secondaryColor => secondary;
-  @Deprecated('Use tertiary instead')
-  Color get tertiaryColor => tertiary;
-
-  late Color primary = const Color(0xFF4B39EF);
-  late Color secondary = const Color(0xFF39D2C0);
-  late Color tertiary = const Color(0xFFEE8B60);
-  late Color alternate = const Color(0xFFFF5963);
-  late Color primaryText = const Color(0xFFFFFFFF);
-  late Color secondaryText = const Color(0xFF95A1AC);
-  late Color primaryBackground = const Color(0xFF1A1F24);
-  late Color secondaryBackground = const Color(0xFF101213);
-  late Color accent1 = const Color(0xFFEEEEEE);
-  late Color accent2 = const Color(0xFFE0E0E0);
-  late Color accent3 = const Color(0xFF757575);
-  late Color accent4 = const Color(0xFF616161);
-  late Color success = const Color(0xFF04A24C);
-  late Color warning = const Color(0xFFFCDC0C);
-  late Color error = const Color(0xFFE21C3D);
-  late Color info = const Color(0xFF1C4494);
-
-  late Color primaryBtnText = Color(0xFFFFFFFF);
-  late Color lineColor = Color(0xFF22282F);
-  late Color teaGreen = Color(0xFFCCD5AE);
-  late Color beige = Color(0xFFE9EDC9);
-  late Color cornsilk = Color(0xFFFEFAE0);
-  late Color papayaWhip = Color(0xFFFAEDCD);
-  late Color buff = Color(0xFFD4A373);
-  late Color grayIcon = Color(0xFF95A1AC);
-  late Color gray200 = Color(0xFFDBE2E7);
-  late Color gray600 = Color(0xFF262D34);
-  late Color black600 = Color(0xFF090F13);
-  late Color tertiary400 = Color(0xFF39D2C0);
-  late Color textColor = Color(0xFF1E2429);
-  late Color richBlack = Color(0xFF03071E);
-  late Color chocolateCosmos = Color(0xFF370617);
-  late Color rosewood = Color(0xFF6A040F);
-  late Color pennRed = Color(0xFF9D0208);
-  late Color engineeringOrange = Color(0xFFD00000);
-  late Color sinopia = Color(0xFFDC2F02);
-  late Color persimmon = Color(0xFFE85D04);
-  late Color princetonOrange = Color(0xFFF48C06);
-  late Color orangeWeb = Color(0xFFFAA307);
-  late Color selectiveYellow = Color(0xFFFFBA08);
 }
 
 extension TextStyleHelper on TextStyle {

@@ -27,7 +27,6 @@ class _IntroduceWidgetState extends State<IntroduceWidget> {
     _model = createModel(context, () => IntroduceModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'introduce'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -140,6 +139,7 @@ class _IntroduceWidgetState extends State<IntroduceWidget> {
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
                                 fontFamily: 'Roboto Mono',
+                                color: FlutterFlowTheme.of(context).black600,
                                 fontWeight: FontWeight.bold,
                               ),
                     ),

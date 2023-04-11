@@ -43,8 +43,6 @@ class _MeWidgetState extends State<MeWidget> {
             FFAppState().fG3B, FFAppState().fG4B);
       });
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -225,7 +223,7 @@ class _MeWidgetState extends State<MeWidget> {
                                 20.0, 12.0, 20.0, 12.0),
                             child: Container(
                               width: double.infinity,
-                              height: 120.0,
+                              height: 140.0,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 boxShadow: [
@@ -247,35 +245,101 @@ class _MeWidgetState extends State<MeWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 4.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'von613me' /* tracker */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodySmall
-                                            .override(
-                                              fontFamily: 'Outfit',
-                                              color: Color(0xFF57636C),
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.normal,
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 4.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'von613me' /* tracker */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF57636C),
+                                                          fontSize: 14.0,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                              ),
                                             ),
-                                      ),
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        '971f077x' /* Word */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF101213),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '971f077x' /* Word */,
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .titleMedium
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF101213),
+                                                    fontSize: 18.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 3.0, 0.0, 0.0),
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0),
+                                              shape: BoxShape.rectangle,
+                                              border: Border.all(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .black600,
+                                                width: 2.0,
+                                              ),
+                                            ),
+                                            child: Stack(
+                                              children: [
+                                                FlutterFlowIconButton(
+                                                  borderColor:
+                                                      Colors.transparent,
+                                                  borderRadius: 30.0,
+                                                  borderWidth: 1.0,
+                                                  buttonSize: 60.0,
+                                                  icon: Icon(
+                                                    Icons.save_alt_rounded,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    size: 30.0,
+                                                  ),
+                                                  onPressed: () async {
+                                                    logFirebaseEvent(
+                                                        'ME_PAGE_save_alt_rounded_ICN_ON_TAP');
+                                                    logFirebaseEvent(
+                                                        'IconButton_navigate_to');
+
+                                                    context.pushNamed(
+                                                        'StordedWords');
+                                                  },
+                                                ),
+                                              ],
+                                            ),
                                           ),
+                                        ),
+                                      ],
                                     ),
                                     Expanded(
                                       child: Row(
@@ -387,7 +451,7 @@ class _MeWidgetState extends State<MeWidget> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 4.0),
+                                          0.0, 5.0, 0.0, 4.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           '8kc4imr2' /* tracker */,
@@ -525,7 +589,7 @@ class _MeWidgetState extends State<MeWidget> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 4.0),
+                                          0.0, 5.0, 0.0, 4.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'okry254j' /* tracker */,
@@ -661,7 +725,7 @@ class _MeWidgetState extends State<MeWidget> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 4.0),
+                                          0.0, 5.0, 0.0, 4.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'ra1m9n8k' /* tracker */,

@@ -34,7 +34,6 @@ class _WordGreetWidgetState extends State<WordGreetWidget> {
     _model = createModel(context, () => WordGreetModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'WordGreet'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -218,14 +217,9 @@ class _WordGreetWidgetState extends State<WordGreetWidget> {
                               : () async {
                                   logFirebaseEvent(
                                       'WORD_GREET_PAGE_FINISH_BTN_ON_TAP');
-                                  logFirebaseEvent('Button_update_app_state');
-                                  setState(() {
-                                    FFAppState().addToGR(widget.level);
-                                    FFAppState().fG4B = 1;
-                                  });
                                   logFirebaseEvent('Button_navigate_to');
 
-                                  context.pushNamed('Grammer');
+                                  context.pushNamed('HomePage');
                                 },
                           text: FFLocalizations.of(context).getText(
                             '2zkxpfma' /* finish */,

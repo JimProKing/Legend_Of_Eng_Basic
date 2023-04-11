@@ -1,5 +1,4 @@
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -51,8 +50,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         return;
       }
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -94,29 +91,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: Color(0xFFE2C2A2),
-                              borderRadius: 0.0,
-                              buttonSize: 50.0,
-                              fillColor: Color(0xFFE2C2A2),
-                              icon: Icon(
-                                Icons.backspace,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryBtnText,
-                                size: 30.0,
-                              ),
-                              showLoadingIndicator: true,
-                              onPressed: () async {
-                                logFirebaseEvent(
-                                    'HOME_PAGE_PAGE_backspace_ICN_ON_TAP');
-                                logFirebaseEvent('IconButton_navigate_back');
-                                context.pop();
-                              },
-                            ),
-                          ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
@@ -211,6 +185,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Roboto',
+                          color: FlutterFlowTheme.of(context).black600,
                           fontSize: 14.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,

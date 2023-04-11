@@ -27,7 +27,6 @@ class _MindsetWidgetState extends State<MindsetWidget> {
     _model = createModel(context, () => MindsetModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'mindset'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -142,6 +141,7 @@ class _MindsetWidgetState extends State<MindsetWidget> {
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Roboto Mono',
+                                  color: FlutterFlowTheme.of(context).black600,
                                   fontWeight: FontWeight.bold,
                                 ),
                       ),
@@ -227,6 +227,8 @@ class _MindsetWidgetState extends State<MindsetWidget> {
                                         .titleMedium
                                         .override(
                                           fontFamily: 'Roboto Mono',
+                                          color: FlutterFlowTheme.of(context)
+                                              .black600,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),
@@ -273,6 +275,8 @@ class _MindsetWidgetState extends State<MindsetWidget> {
                                         .titleMedium
                                         .override(
                                           fontFamily: 'Roboto Mono',
+                                          color: FlutterFlowTheme.of(context)
+                                              .black600,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),
@@ -346,6 +350,8 @@ class _MindsetWidgetState extends State<MindsetWidget> {
                                         .titleMedium
                                         .override(
                                           fontFamily: 'Roboto Mono',
+                                          color: FlutterFlowTheme.of(context)
+                                              .black600,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),
@@ -390,6 +396,8 @@ class _MindsetWidgetState extends State<MindsetWidget> {
                                         .titleMedium
                                         .override(
                                           fontFamily: 'Roboto Mono',
+                                          color: FlutterFlowTheme.of(context)
+                                              .black600,
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ),

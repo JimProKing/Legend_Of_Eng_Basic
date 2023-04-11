@@ -35,7 +35,6 @@ class _L4WidgetState extends State<L4Widget> {
     _model = createModel(context, () => L4Model());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'L4'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

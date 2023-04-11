@@ -31,7 +31,6 @@ class _ReadingWidgetState extends State<ReadingWidget> {
     _model = createModel(context, () => ReadingModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Reading'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

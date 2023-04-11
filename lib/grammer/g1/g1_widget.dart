@@ -34,7 +34,6 @@ class _G1WidgetState extends State<G1Widget> {
     _model = createModel(context, () => G1Model());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'G1'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -154,7 +153,7 @@ class _G1WidgetState extends State<G1Widget> {
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 20.0, 10.0, 0.0),
+                                  0.0, 10.0, 0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 1.0,
                                 height:
@@ -258,17 +257,16 @@ class _G1WidgetState extends State<G1Widget> {
                                                             padding:
                                                                 EdgeInsetsDirectional
                                                                     .fromSTEB(
+                                                                        0.0,
                                                                         10.0,
-                                                                        10.0,
-                                                                        10.0,
+                                                                        0.0,
                                                                         0.0),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
                                                                 'p9r2itmb' /* "민수가 밥을 먹는다" -> "민수가 먹는다 밥을"
-
-... */
+"... */
                                                                 ,
                                                               ),
                                                               style: FlutterFlowTheme

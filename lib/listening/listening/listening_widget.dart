@@ -29,7 +29,6 @@ class _ListeningWidgetState extends State<ListeningWidget> {
     _model = createModel(context, () => ListeningModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Listening'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -272,6 +271,7 @@ class _ListeningWidgetState extends State<ListeningWidget> {
                               width: 3.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
+                            disabledColor: Color(0xFFDBE2E7),
                           ),
                         ),
                       ),

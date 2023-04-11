@@ -29,7 +29,6 @@ class _GrammerWidgetState extends State<GrammerWidget> {
     _model = createModel(context, () => GrammerModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Grammer'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

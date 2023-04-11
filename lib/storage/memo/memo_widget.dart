@@ -27,8 +27,6 @@ class _MemoWidgetState extends State<MemoWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => MemoModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

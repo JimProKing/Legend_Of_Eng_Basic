@@ -21,8 +21,6 @@ void main() async {
 
   await SupaFlow.initialize();
 
-  await FlutterFlowTheme.initialize();
-
   final appState = FFAppState(); // Initialize FFAppState
 
   runApp(ChangeNotifierProvider(
@@ -42,7 +40,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Locale? _locale;
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+  ThemeMode _themeMode = ThemeMode.system;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
@@ -65,7 +63,6 @@ class _MyAppState extends State<MyApp> {
 
   void setThemeMode(ThemeMode mode) => setState(() {
         _themeMode = mode;
-        FlutterFlowTheme.saveThemeMode(mode);
       });
 
   @override
@@ -86,7 +83,6 @@ class _MyAppState extends State<MyApp> {
         Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
       ],
       theme: ThemeData(brightness: Brightness.light),
-      darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
       routeInformationParser: _router.routeInformationParser,
       routerDelegate: _router.routerDelegate,
@@ -121,6 +117,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomePage': HomePageWidget(),
       'Main': MainWidget(),
+      'StordedWords': StordedWordsWidget(),
       'howToUse': HowToUseWidget(),
       'ME': MeWidget(),
     };
@@ -178,7 +175,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.lightbulb_outline_sharp,
+                  Icons.save_alt,
                   color: currentIndex == 2
                       ? FlutterFlowTheme.of(context).black600
                       : FlutterFlowTheme.of(context).grayIcon,
@@ -192,8 +189,22 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.person_outline_rounded,
+                  Icons.lightbulb_outline_sharp,
                   color: currentIndex == 3
+                      ? FlutterFlowTheme.of(context).black600
+                      : FlutterFlowTheme.of(context).grayIcon,
+                  size: 24.0,
+                ),
+              ],
+            ),
+          ),
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.person_outline_rounded,
+                  color: currentIndex == 4
                       ? FlutterFlowTheme.of(context).black600
                       : FlutterFlowTheme.of(context).grayIcon,
                   size: 24.0,

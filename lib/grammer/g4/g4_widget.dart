@@ -34,7 +34,6 @@ class _G4WidgetState extends State<G4Widget> {
     _model = createModel(context, () => G4Model());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'G4'});
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -154,7 +153,7 @@ class _G4WidgetState extends State<G4Widget> {
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 20.0, 10.0, 0.0),
+                                  0.0, 10.0, 0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 1.0,
                                 height:
@@ -169,152 +168,126 @@ class _G4WidgetState extends State<G4Widget> {
                                 ),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 10.0, 0.0, 0.0),
-                                  child: ListView(
-                                    padding: EdgeInsets.zero,
-                                    scrollDirection: Axis.horizontal,
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 10.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 0.0, 10.0, 0.0),
-                                              child: Container(
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width *
-                                                    0.8,
-                                                height: MediaQuery.of(context)
-                                                        .size
-                                                        .height *
-                                                    0.61,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          20.0),
-                                                  border: Border.all(
-                                                    color: Color(0xFFE7E987),
-                                                    width: 2.0,
+                                            10.0, 10.0, 10.0, 0.0),
+                                        child: Container(
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.88,
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.61,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            borderRadius:
+                                                BorderRadius.circular(20.0),
+                                            border: Border.all(
+                                              color: Color(0xFFE7E987),
+                                              width: 2.0,
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 10.0, 0.0, 0.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 10.0, 0.0, 0.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'jd13e2j1' /* 동사의 특징에 따른 문장 구성 변화. */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Roboto Mono',
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                                   ),
                                                 ),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  10.0,
-                                                                  10.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'jd13e2j1' /* 동사의 특징에 따른 문장 구성 변화. */,
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 0.0, 10.0, 0.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'koc4prca' /* 종속접속사는 week3의 관계사와 완벽히 같은 것입니다... */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Roboto Mono',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .black600,
+                                                          fontSize: 12.0,
                                                         ),
-                                                        style:
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 5.0, 10.0, 0.0),
+                                                  child: Container(
+                                                    width:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width *
+                                                            1.0,
+                                                    decoration: BoxDecoration(
+                                                      color: Color(0xFFFAFAD8),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20.0),
+                                                      border: Border.all(
+                                                        color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Roboto Mono',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                ),
+                                                                .alternate,
                                                       ),
                                                     ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  10.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'koc4prca' /* 종속접속사는 week3의 관계사와 완벽히 같은 것입니다... */,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Roboto Mono',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .black600,
-                                                                  fontSize:
-                                                                      12.0,
-                                                                ),
-                                                      ),
-                                                    ),
-                                                    Padding(
+                                                    child: Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   5.0,
-                                                                  10.0,
-                                                                  0.0),
-                                                      child: Container(
-                                                        width: MediaQuery.of(
-                                                                    context)
-                                                                .size
-                                                                .width *
-                                                            1.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0xFFFAFAD8),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      20.0),
-                                                          border: Border.all(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                          ),
-                                                        ),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      10.0,
-                                                                      5.0,
-                                                                      0.0,
-                                                                      5.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'oiip9za1' /* 나는 피아노 치고 드럼도 쳐.
+                                                                  0.0,
+                                                                  5.0),
+                                                      child: Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'oiip9za1' /* 나는 피아노 치고 드럼도 쳐.
 i play piano ... */
-                                                              ,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
+                                                          ,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
@@ -325,44 +298,59 @@ i play piano ... */
                                                                   fontSize:
                                                                       12.0,
                                                                 ),
-                                                          ),
-                                                        ),
                                                       ),
                                                     ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  10.0,
-                                                                  5.0,
-                                                                  10.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'lk6u8yjh' /* 절에 대해 제대로 이해하셨다면, 등위 접속사는 결국 절... */,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Roboto Mono',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryText,
-                                                                  fontSize:
-                                                                      12.0,
-                                                                ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                                  ),
                                                 ),
-                                              ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 5.0, 10.0, 0.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'lk6u8yjh' /* 절에 대해 제대로 이해하셨다면, 등위 접속사는 결국 절... */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Roboto Mono',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          fontSize: 12.0,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 5.0, 10.0, 0.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '5vnwhe4k' /* * 접속사들을 정리해서 연습하거나 암기하는 것은 상위 ... */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Roboto Mono',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .sinopia,
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
-                                          ],
+                                          ),
                                         ),
                                       ),
                                     ],
