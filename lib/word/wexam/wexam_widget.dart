@@ -150,9 +150,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'tkj8epkf' /* 단어시험 */,
-                              ),
+                              '단어시험',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -202,9 +200,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '1d24c3io' /* *뒤로가기 시 맞은문제도 초기화 됩니다. */,
-                                  ),
+                                  '*뒤로가기 시 맞은문제도 초기화 됩니다.',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -223,9 +219,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'evjh14no' /* 푼 갯수 :  */,
-                                ),
+                                '푼 갯수 : ',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                               Text(
@@ -418,11 +412,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                                                                   listViewWordTableRow
                                                                       .name))
                                                                 Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    '05usap7g' /* 맞았습니다! */,
-                                                                  ),
+                                                                  '맞았습니다!',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -497,11 +487,8 @@ class _WexamWidgetState extends State<WexamWidget> {
                                                                             return;
                                                                           }
                                                                         },
-                                                                  text: FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    'ctbpvixs' /* submit */,
-                                                                  ),
+                                                                  text:
+                                                                      'submit',
                                                                   options:
                                                                       FFButtonOptions(
                                                                     width:
@@ -636,9 +623,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                                   return;
                                 }
                               },
-                        text: FFLocalizations.of(context).getText(
-                          '95os5c9r' /* finish */,
-                        ),
+                        text: 'finish',
                         options: FFButtonOptions(
                           width: 130.0,
                           height: 40.0,

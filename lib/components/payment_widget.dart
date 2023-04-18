@@ -67,9 +67,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                 children: [
                   if (FFAppState().payed == 0)
                     Text(
-                      FFLocalizations.of(context).getText(
-                        'ss73sg4v' /* * 모든 컨텐츠 이용은 결제가 필요합니다. */,
-                      ),
+                      '* 모든 컨텐츠 이용은 결제가 필요합니다.',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Roboto Mono',
                             color: FlutterFlowTheme.of(context).error,
@@ -83,9 +81,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'xs6c9jrm' /* * 7,700원 한번 결제로 평생 이용가능. */,
-                  ),
+                  '* 7,700원 한번 결제로 평생 이용가능.',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Roboto Mono',
                         color: Color(0xFFFA9807),
@@ -98,7 +94,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                   logFirebaseEvent('PAYMENT_COMP_7,700원_BTN_ON_TAP');
                   logFirebaseEvent('Button_braintree_payment');
                   final transacAmount = 7700.0;
-                  final transacDisplayName = 'LOE_Basic';
+                  final transacDisplayName = 'payment';
                   if (kIsWeb) {
                     showSnackbar(context, 'Payments not yet supported on web.');
                     return;
@@ -112,6 +108,13 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                       amount: transacAmount.toString(),
                       currencyCode: 'KRW',
                       displayName: transacDisplayName,
+                    ),
+                    applePayRequest: BraintreeApplePayRequest(
+                      amount: transacAmount,
+                      currencyCode: 'KRW',
+                      countryCode: 'KO',
+                      displayName: transacDisplayName,
+                      appleMerchantID: appleMerchantId(),
                     ),
                   );
                   final dropInResult =
@@ -145,9 +148,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
 
                   setState(() {});
                 },
-                text: FFLocalizations.of(context).getText(
-                  'vxe591ny' /* 7,700원 */,
-                ),
+                text: '7,700원',
                 icon: FaIcon(
                   FontAwesomeIcons.moneyBillAlt,
                 ),
@@ -221,9 +222,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              hintText: FFLocalizations.of(context).getText(
-                                '96jz0dv8' /*  쿠폰번호입력 */,
-                              ),
+                              hintText: ' 쿠폰번호입력',
                               hintStyle: FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
@@ -328,9 +327,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                 return;
                               }
                             },
-                            text: FFLocalizations.of(context).getText(
-                              'whh5zjct' /* 쿠폰 */,
-                            ),
+                            text: '쿠폰',
                             options: FFButtonOptions(
                               width: 70.0,
                               height: 40.0,
@@ -364,9 +361,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'q4rnfem5' /* * 결제시 해당 창은 사라집니다. */,
-                  ),
+                  '* 결제시 해당 창은 사라집니다.',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Roboto Mono',
                         color: FlutterFlowTheme.of(context).black600,

@@ -95,9 +95,7 @@ class _MainWidgetState extends State<MainWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'ajvo5w85' /* 영어의 전설 */,
-                              ),
+                              '영어의 전설',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -147,9 +145,7 @@ class _MainWidgetState extends State<MainWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 10.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'g9upur1m' /* 기본기 수련 */,
-                              ),
+                              '기본기 수련',
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context)
                                   .headlineMedium
@@ -174,9 +170,7 @@ class _MainWidgetState extends State<MainWidget> {
 
                                       context.pushNamed('Word');
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      'nlh28xqa' /* Word */,
-                                    ),
+                                    text: 'Word',
                                     options: FFButtonOptions(
                                       width: 300.0,
                                       height: 60.0,
@@ -220,9 +214,7 @@ class _MainWidgetState extends State<MainWidget> {
 
                                     context.pushNamed('Listening');
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'zwi4d2ih' /* Listening */,
-                                  ),
+                                  text: 'Listening',
                                   options: FFButtonOptions(
                                     width: 300.0,
                                     height: 60.0,
@@ -267,9 +259,7 @@ class _MainWidgetState extends State<MainWidget> {
 
                                       context.pushNamed('Reading');
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      'pkx7uwho' /* Reading */,
-                                    ),
+                                    text: 'Reading',
                                     options: FFButtonOptions(
                                       width: 300.0,
                                       height: 60.0,
@@ -314,9 +304,7 @@ class _MainWidgetState extends State<MainWidget> {
 
                                   context.pushNamed('Grammer');
                                 },
-                                text: FFLocalizations.of(context).getText(
-                                  'oym5pi6o' /* Grammer */,
-                                ),
+                                text: 'Grammer',
                                 options: FFButtonOptions(
                                   width: 300.0,
                                   height: 60.0,

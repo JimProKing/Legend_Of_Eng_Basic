@@ -97,9 +97,7 @@ class _RotWidgetState extends State<RotWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'v8zis0in' /* 수고하셨습니다 :) */,
-                        ),
+                        '수고하셨습니다 :)',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Nanum Gothic',
@@ -135,9 +133,7 @@ class _RotWidgetState extends State<RotWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'c23qvxuh' /* 영어 읽기 기본기 */,
-                        ),
+                        '영어 읽기 기본기',
                         style: FlutterFlowTheme.of(context).titleLarge.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
@@ -175,9 +171,7 @@ class _RotWidgetState extends State<RotWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '4eerurux' /* 수능, 토익, 토플 등 다양한 영어 읽기 시험에서는 빠... */,
-                              ),
+                              '수능, 토익, 토플 등 다양한 영어 읽기 시험에서는 빠른 속도로 정확하게 영어 지문을 읽어나가는 능력을 필요로 합니다.\n\n단어를 많이 외우는 것이 가장 기본입니다.\n문법 공부나 Listening 경험을 늘리는 것은, 심화 영어 읽기에 도움이 안된다는 것은 이미 많은 분들이 이해하고 있습니다.\n',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -192,9 +186,7 @@ class _RotWidgetState extends State<RotWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 10.0, 10.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '5uescybn' /* 심화 독해 시험에서는, 문법이나 틀에 얽메이는 것이 아... */,
-                              ),
+                              '심화 독해 시험에서는, 문법이나 틀에 얽메이는 것이 아닌, 빠른 시간내에 정확하게 정보를 뽑아내는 것이 핵심입니다.\n\n본 과정을 수료하셨다면, 원하시는 시험 수준의 지문 Reading 으로 바로 넘어가신 후 공부를 시작하세요. ',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -212,9 +204,7 @@ class _RotWidgetState extends State<RotWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'tuevf4ba' /* 독해 연습 핵심 */,
-                        ),
+                        '독해 연습 핵심',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).titleLarge.override(
                               fontFamily: 'Poppins',
@@ -236,11 +226,7 @@ class _RotWidgetState extends State<RotWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 10.0, 10.0, 10.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'vaf7wm0u' /* 1. 영어를 몰라도 한글로라도 읽기. 
-* 지문 상황파... */
-                            ,
-                          ),
+                          '1. 영어를 몰라도 한글로라도 읽기. \n* 지문 상황파악이 우선\n2. 2번쨰 읽을땐 영어도 같이 읽기.\n3. 3번째부턴 최대한 영어 위주로 읽기.\n4. 모르는 단어를 최대한 유추해보기.\n5. 인상깊은 표현은 따로 정리.',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(

@@ -98,9 +98,7 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'cw05ill5' /* 영어의 전설 */,
-                        ),
+                        '영어의 전설',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Nanum Gothic',
@@ -137,9 +135,7 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'r3czsuqn' /* 사용방법 */,
-                        ),
+                        '사용방법',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -165,9 +161,7 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
 
                                 context.pushNamed('introduce');
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'hh7ypl86' /* 앱 소개 */,
-                              ),
+                              text: '앱 소개',
                               options: FFButtonOptions(
                                 width: 300.0,
                                 height: 60.0,
@@ -213,9 +207,7 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
 
                             context.pushNamed('HTUContent');
                           },
-                          text: FFLocalizations.of(context).getText(
-                            '0ivqzkmk' /* 사용방법 */,
-                          ),
+                          text: '사용방법',
                           options: FFButtonOptions(
                             width: 300.0,
                             height: 60.0,
@@ -251,9 +243,7 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'g5v7bx6v' /* 공부방법 */,
-                        ),
+                        '공부방법',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -276,9 +266,7 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
 
                               context.pushNamed('mindset');
                             },
-                            text: FFLocalizations.of(context).getText(
-                              'fehlbk7b' /* 영어 기본 마음가짐 */,
-                            ),
+                            text: '영어 기본 마음가짐',
                             options: FFButtonOptions(
                               width: 300.0,
                               height: 60.0,
@@ -321,9 +309,7 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
 
                                 context.pushNamed('course');
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'v8y8lo7u' /* 영어의전설 시리즈 */,
-                              ),
+                              text: '영어의전설 시리즈',
                               options: FFButtonOptions(
                                 width: 300.0,
                                 height: 60.0,

@@ -98,9 +98,7 @@ class _HTUContentWidgetState extends State<HTUContentWidget> {
                             ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'lyw3md3l' /* 사용방법 */,
-                            ),
+                            '사용방법',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(

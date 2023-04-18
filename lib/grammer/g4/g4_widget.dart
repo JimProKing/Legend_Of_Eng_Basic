@@ -107,9 +107,7 @@ class _G4WidgetState extends State<G4Widget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 4.0, 0.0, 4.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              'lhwve3jo' /* week4. 접속사 */,
-                            ),
+                            'week4. 접속사',
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -210,10 +208,7 @@ class _G4WidgetState extends State<G4Widget> {
                                                       .fromSTEB(
                                                           10.0, 10.0, 0.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'jd13e2j1' /* 동사의 특징에 따른 문장 구성 변화. */,
-                                                    ),
+                                                    '동사의 특징에 따른 문장 구성 변화.',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -230,10 +225,7 @@ class _G4WidgetState extends State<G4Widget> {
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'koc4prca' /* 종속접속사는 week3의 관계사와 완벽히 같은 것입니다... */,
-                                                    ),
+                                                    '종속접속사는 week3의 관계사와 완벽히 같은 것입니다. 그렇기에 설명을 생략하도록 하겠습니다.\n\n종속접속사가 이미 완성된 문장에서 추가적인 내용을 설명하기 위해 절을 하나 더 붙이는 것이었다고 하면, 등위접속사는 대등한 여러 절을 연결하는 접속사입니다.',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -278,13 +270,7 @@ class _G4WidgetState extends State<G4Widget> {
                                                                   0.0,
                                                                   5.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'oiip9za1' /* 나는 피아노 치고 드럼도 쳐.
-i play piano ... */
-                                                          ,
-                                                        ),
+                                                        '나는 피아노 치고 드럼도 쳐.\ni play piano and play drum.\n\n나는 밥을 사랑하지만 국수는 혐오해.\ni love rice but hate nuddle.\n\ni go busan also i go seoul.\n나는 부산을 가고 또한 서울도 가.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -307,10 +293,7 @@ i play piano ... */
                                                       .fromSTEB(
                                                           10.0, 5.0, 10.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'lk6u8yjh' /* 절에 대해 제대로 이해하셨다면, 등위 접속사는 결국 절... */,
-                                                    ),
+                                                    '절에 대해 제대로 이해하셨다면, 등위 접속사는 결국 절을 연결하는 기능만을 하기에 이해하기에 어렵지 않으실 것입니다.',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -329,10 +312,7 @@ i play piano ... */
                                                       .fromSTEB(
                                                           10.0, 5.0, 10.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '5vnwhe4k' /* * 접속사들을 정리해서 연습하거나 암기하는 것은 상위 ... */,
-                                                    ),
+                                                    '* 접속사들을 정리해서 연습하거나 암기하는 것은 상위 레벨에서 시도하셔도 충분합니다.접속사를 자유자재로 활용하고 이해할 수 있다는 것은 이미 기본편을 볼 레벨이 아닙니다.\n\n 접속사 활용에 대해서는 상위버전에서 제대로 익히고 기본편에서는 구조와 틀을 이해하는 데 초점을 맞추시길 바랍니다.',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -389,9 +369,7 @@ i play piano ... */
 
                                     context.pushNamed('Grammer');
                                   },
-                            text: FFLocalizations.of(context).getText(
-                              'qd2kk8uv' /* finish */,
-                            ),
+                            text: 'finish',
                             options: FFButtonOptions(
                               width: 130.0,
                               height: 40.0,

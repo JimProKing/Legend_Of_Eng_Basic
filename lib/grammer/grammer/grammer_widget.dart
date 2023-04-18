@@ -96,9 +96,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '83ypxowb' /* Grammer */,
-                              ),
+                              'Grammer',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -160,9 +158,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
 
                             context.pushNamed('GOT');
                           },
-                          text: FFLocalizations.of(context).getText(
-                            '7q1w4ztx' /* 오리엔테이션 */,
-                          ),
+                          text: '오리엔테이션',
                           options: FFButtonOptions(
                             width: 250.0,
                             height: 60.0,
@@ -216,9 +212,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                               }.withoutNulls,
                             );
                           },
-                          text: FFLocalizations.of(context).getText(
-                            '4pgu1mdt' /* week1. 기본 문장구조 */,
-                          ),
+                          text: 'week1. 기본 문장구조',
                           options: FFButtonOptions(
                             width: 250.0,
                             height: 60.0,
@@ -274,9 +268,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                                     }.withoutNulls,
                                   );
                                 },
-                          text: FFLocalizations.of(context).getText(
-                            '3arefy44' /* Week2. 동사변형     */,
-                          ),
+                          text: 'Week2. 동사변형    ',
                           options: FFButtonOptions(
                             width: 250.0,
                             height: 60.0,
@@ -333,9 +325,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                                     }.withoutNulls,
                                   );
                                 },
-                          text: FFLocalizations.of(context).getText(
-                            'mpkk7wst' /* Week3. 관계사       */,
-                          ),
+                          text: 'Week3. 관계사      ',
                           options: FFButtonOptions(
                             width: 250.0,
                             height: 60.0,
@@ -392,9 +382,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                                     }.withoutNulls,
                                   );
                                 },
-                          text: FFLocalizations.of(context).getText(
-                            '2g1k1sh1' /* Week4. 접속사 활용.  */,
-                          ),
+                          text: 'Week4. 접속사 활용. ',
                           options: FFButtonOptions(
                             width: 250.0,
                             height: 60.0,

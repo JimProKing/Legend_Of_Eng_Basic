@@ -115,9 +115,7 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'gdqs84uv' /* 보관함 */,
-                              ),
+                              '보관함',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(

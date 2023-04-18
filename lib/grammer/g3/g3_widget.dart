@@ -107,9 +107,7 @@ class _G3WidgetState extends State<G3Widget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 4.0, 0.0, 4.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              '3g3ienwb' /* week3. 관계사 */,
-                            ),
+                            'week3. 관계사',
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -226,11 +224,7 @@ class _G3WidgetState extends State<G3Widget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'uvt2vrs8' /* 관계사 기본 */,
-                                                          ),
+                                                          '관계사 기본',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -280,13 +274,7 @@ class _G3WidgetState extends State<G3Widget> {
                                                                         0.0,
                                                                         5.0),
                                                             child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                '9qcnup2m' /* 나는 사랑해 영희를 (나를 사랑해주는)
-i love 영... */
-                                                                ,
-                                                              ),
+                                                              '나는 사랑해 영희를 (나를 사랑해주는)\ni love 영희 who love me.',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -312,11 +300,7 @@ i love 영... */
                                                                     10.0,
                                                                     0.0),
                                                         child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            'x0m4dpev' /* 영어는 기본적으로 문장을 항상 두괄식으로 사용하는 것을... */,
-                                                          ),
+                                                          '영어는 기본적으로 문장을 항상 두괄식으로 사용하는 것을 선호합니다.\n\n즉, 본론을 항상 먼저 말하고 상세한 내용을 뒤에서 보충설명 해주는 방식을 선호합니다. 이를 위해 생겨난 문법이 \'관계사\' 입니다.\n\n한글에서는\n\"나는 (나를 사랑해주는) 영희를 사랑해\"라고 이야기합니다.\n영어에서는\n\"나는 영희를 사랑해 (나를 사랑해주는)\"으로, 본론을 다 이야기 한 이후 상세내용을 보충설명해줍니다.\n\nwho, which, that 계열 관계사와\nwhat 계열 (whenever, however 등)의 차이만 이해하면, 관계사를 사용하고 이해하는 데에는 큰 어려움이 없으실 것입니다.',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -386,11 +370,7 @@ i love 영... */
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'pzyj45vw' /* which, who, that */,
-                                                        ),
+                                                        'which, who, that',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -441,13 +421,7 @@ i love 영... */
                                                                       0.0,
                                                                       5.0),
                                                           child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'i257pq8o' /* 나는 갔어 학교(내가 가기 싫어하는)에.
-i went ... */
-                                                              ,
-                                                            ),
+                                                            '나는 갔어 학교(내가 가기 싫어하는)에.\ni went school which i don\'t want to go.\n\n나는 했어 축구(내가 좋아하는)를.\ni played soccer which i like.\n\n나는 좋아해 잠을(내 유일한 취미인).\ni live to sleep which is my only one hobby.\n',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -473,11 +447,7 @@ i went ... */
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          '6mwwgvvg' /* 본론이 이미 완성된 시점에서, 어떠한 한 대상에 대한 ... */,
-                                                        ),
+                                                        '본론이 이미 완성된 시점에서, 어떠한 한 대상에 대한 보충설명을 해주기 위해 이러한 관계사들이 사용됩니다.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -548,11 +518,7 @@ i went ... */
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'm4b8gdzz' /* what, whoever, whenever 등 */,
-                                                        ),
+                                                        'what, whoever, whenever 등',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -603,13 +569,7 @@ i went ... */
                                                                       10.0,
                                                                       10.0),
                                                           child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              '1880b11d' /* 나는 좋아해 (내가 좋아하는 것을)
-i love wha... */
-                                                              ,
-                                                            ),
+                                                            '나는 좋아해 (내가 좋아하는 것을)\ni love what i like.\n\n나는 공부를 좋아해 (그게 무엇이든지)\ni love to study whatever it is.',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -635,11 +595,7 @@ i love wha... */
                                                                   10.0,
                                                                   0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'jwexlopm' /* 관계사 절을 통째로 문장선분으로 넣어줄 때에 이러한 관... */,
-                                                        ),
+                                                        '관계사 절을 통째로 문장선분으로 넣어줄 때에 이러한 관계사들을 사용합니다. \n\n이 두가지 부류의 관계사의 차이는, 예문과 실제 예문을 접하게 되면 자연스럽게 받아들이게 되실 것입니다. 그러니 걱정하지 마시고, 실제 예문들을 만나는 경험을 늘려보세요.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -698,9 +654,7 @@ i love wha... */
 
                                     context.pushNamed('Grammer');
                                   },
-                            text: FFLocalizations.of(context).getText(
-                              '6og3h96e' /* finish */,
-                            ),
+                            text: 'finish',
                             options: FFButtonOptions(
                               width: 130.0,
                               height: 40.0,

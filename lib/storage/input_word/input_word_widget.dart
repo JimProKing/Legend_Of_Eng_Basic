@@ -62,9 +62,7 @@ class _InputWordWidgetState extends State<InputWordWidget> {
         textCapitalization: TextCapitalization.none,
         obscureText: false,
         decoration: InputDecoration(
-          hintText: FFLocalizations.of(context).getText(
-            'imhfb3sj' /* [단어를 영어로 적으세요.] */,
-          ),
+          hintText: '[단어를 영어로 적으세요.]',
           hintStyle: FlutterFlowTheme.of(context).bodySmall,
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(

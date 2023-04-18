@@ -110,9 +110,7 @@ class _MeWidgetState extends State<MeWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'nibbbdrs' /* 영어의 전설 */,
-                              ),
+                              '영어의 전설',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -169,9 +167,7 @@ class _MeWidgetState extends State<MeWidget> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    'vmger5qx' /* Hello, */,
-                                  ),
+                                  'Hello,',
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
                                       .override(
@@ -185,9 +181,7 @@ class _MeWidgetState extends State<MeWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       2.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'wq7tp9j5' /* English! */,
-                                    ),
+                                    'English!',
                                     style: FlutterFlowTheme.of(context)
                                         .displaySmall
                                         .override(
@@ -205,9 +199,7 @@ class _MeWidgetState extends State<MeWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'ygg6hirc' /* 진도 관리 화면입니다 :) */,
-                              ),
+                              '진도 관리 화면입니다 :)',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -257,10 +249,7 @@ class _MeWidgetState extends State<MeWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 4.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'von613me' /* tracker */,
-                                                ),
+                                                'tracker',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodySmall
@@ -275,10 +264,7 @@ class _MeWidgetState extends State<MeWidget> {
                                               ),
                                             ),
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '971f077x' /* Word */,
-                                              ),
+                                              'Word',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .titleMedium
@@ -354,10 +340,7 @@ class _MeWidgetState extends State<MeWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'a9qbg61s' /* Progress */,
-                                              ),
+                                              'Progress',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -453,9 +436,7 @@ class _MeWidgetState extends State<MeWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 4.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '8kc4imr2' /* tracker */,
-                                        ),
+                                        'tracker',
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -467,9 +448,7 @@ class _MeWidgetState extends State<MeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        '183j5o7d' /* Listening */,
-                                      ),
+                                      'Listening',
                                       style: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -492,10 +471,7 @@ class _MeWidgetState extends State<MeWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'ym2rssa2' /* Progress */,
-                                              ),
+                                              'Progress',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -591,9 +567,7 @@ class _MeWidgetState extends State<MeWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 4.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'okry254j' /* tracker */,
-                                        ),
+                                        'tracker',
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -605,9 +579,7 @@ class _MeWidgetState extends State<MeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'ipowtouo' /* Reading */,
-                                      ),
+                                      'Reading',
                                       style: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -630,10 +602,7 @@ class _MeWidgetState extends State<MeWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'busuxm0g' /* Progress */,
-                                              ),
+                                              'Progress',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -727,9 +696,7 @@ class _MeWidgetState extends State<MeWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 4.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'ra1m9n8k' /* tracker */,
-                                        ),
+                                        'tracker',
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -741,9 +708,7 @@ class _MeWidgetState extends State<MeWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'mmpgy249' /* Grammer */,
-                                      ),
+                                      'Grammer',
                                       style: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -766,10 +731,7 @@ class _MeWidgetState extends State<MeWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'gv3ynf1l' /* Progress */,
-                                              ),
+                                              'Progress',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall

@@ -98,9 +98,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          '6utgypn9' /* 커리큘럼 */,
-                        ),
+                        '커리큘럼',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Nanum Gothic',
@@ -137,9 +135,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'xy46h0uv' /* 영어의전설 시리즈 */,
-                        ),
+                        '영어의전설 시리즈',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Roboto Mono',

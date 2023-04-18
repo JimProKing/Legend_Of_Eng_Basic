@@ -97,9 +97,7 @@ class _LotWidgetState extends State<LotWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'qb587d1g' /* Listening O/T */,
-                        ),
+                        'Listening O/T',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Nanum Gothic',
@@ -135,9 +133,7 @@ class _LotWidgetState extends State<LotWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          '8ez795wq' /* 영어 듣기 기본기 */,
-                        ),
+                        '영어 듣기 기본기',
                         style: FlutterFlowTheme.of(context).titleLarge.override(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
@@ -175,9 +171,7 @@ class _LotWidgetState extends State<LotWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'sfboohc8' /* 많이, 자주 들어주세요. */,
-                              ),
+                              '많이, 자주 들어주세요.',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -191,9 +185,7 @@ class _LotWidgetState extends State<LotWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'deyqnb70' /* 영어의 구조를 이해하는 것이 필요하긴 하지만, 영어 듣... */,
-                              ),
+                              '영어의 구조를 이해하는 것이 필요하긴 하지만, 영어 듣기에서 가장 중요한 것은 경험입니다. Listening은 귀의 근육으로 하는 것이고, Speaking은 결국 혀의 근육으로 하는 것입니다. 이 말의 깊은 의미를 당장은 이해하기 힘드시겠지만, 경험이 조금만 쌓이면 이게 무슨 의미인지 자연스럽게 이해하게 되실 것입니다.\n\n기본기를 트레이닝하는 1달동안, 하루에 한번씩 각 주간의 듣기 지문을 한번씩 매일 들으세요. 어느샌가 영어의 높낮이, 억양, 템포 등 글로 설명할 수 없는 부분들을 자연스럽게 체화하게 되실 것이고, 시간이 더 지나면 받아쓰기가 될 정도까지 들리실 것입니다.\n\n듣기만큼은, 머리로 하는 것이 아닌 경험과 신경세포들로 하는 것이라는 것을 명심하세요.',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

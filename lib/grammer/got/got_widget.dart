@@ -106,9 +106,7 @@ class _GotWidgetState extends State<GotWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 4.0, 0.0, 4.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              'y75us2lu' /* Grammer O/T */,
-                            ),
+                            'Grammer O/T',
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -238,11 +236,7 @@ class _GotWidgetState extends State<GotWidget> {
                                                                       0.0,
                                                                       0.0),
                                                           child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'n39svnpq' /* 문법을 대할 때의 마음가짐. */,
-                                                            ),
+                                                            '문법을 대할 때의 마음가짐.',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -294,13 +288,7 @@ class _GotWidgetState extends State<GotWidget> {
                                                                       0.0,
                                                                       5.0),
                                                           child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'o5i1rpnb' /* 밥이랑 국이랑
-밥과 국 */
-                                                              ,
-                                                            ),
+                                                            '밥이랑 국이랑\n밥과 국',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -326,11 +314,7 @@ class _GotWidgetState extends State<GotWidget> {
                                                                   10.0,
                                                                   0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'jjjmhwyc' /*  한국인 중에서도 위의 두가지의 차이를 정확히 이해하고... */,
-                                                        ),
+                                                        ' 한국인 중에서도 위의 두가지의 차이를 정확히 이해하고 있는 사람은 많지 않습니다.\n정답은, \'이랑\'은 격식적이지 않은 경우에 사용되고, \'과\'는 격식적인 경우에 사용됩니다.\n\n 영어를 이해하기 위해 필요한 문법요소들이 분명히 존재하지만, 현재 한국 문법은 일제 강점기 이후에 일본의 영어문법을 그대로 가져온 \'성문종합영어\'를 근간으로 하기 때문에 비효율적이면서도 실제 영어와 맞지 않는 부분도 상당히 많습니다.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -355,11 +339,7 @@ class _GotWidgetState extends State<GotWidget> {
                                                                   10.0,
                                                                   0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'hhi2zd4q' /* * 실제 영어를 연구하는 외국인들조차도 한국식 영어문법... */,
-                                                        ),
+                                                        '* 실제 영어를 연구하는 외국인들조차도 한국식 영어문법은 정규 문법으로 취급하지 않습니다.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -387,11 +367,7 @@ class _GotWidgetState extends State<GotWidget> {
                                                                   10.0,
                                                                   0.0),
                                                       child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'f1lvqznc' /*  독해와 듣기에서 꼭 필요한 문법요소들을 설명해드리고,... */,
-                                                        ),
+                                                        ' 독해와 듣기에서 꼭 필요한 문법요소들을 설명해드리고, Listening 파트에서 해당 부분의 연습을 도와드립니다. 본 어플에서 다루는 문법만 숙지해도 내용파악 및 독해에 큰 지장이 없을 것입니다. 특히나 실제 회화를 목표로 하신다면, 본 어플의 문법요소만 숙지하고 경험을 쌓는것을 추천드립니다.\n\n 중요한 것은, 어휘량과 경험입니다.\n엄밀하고 더 깊은 문법을 공부하기를 원하신다면, 문법편을 참고해주세요.\n(2023년 5월 출시예정)',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)

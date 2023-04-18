@@ -108,9 +108,7 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 4.0, 0.0, 4.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              'jnu3xc39' /* Level */,
-                            ),
+                            'Level',
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -317,9 +315,7 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
 
                                       context.pushNamed('Reading');
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'atc7z9f4' /* finish */,
-                              ),
+                              text: 'finish',
                               options: FFButtonOptions(
                                 width: 130.0,
                                 height: 40.0,
@@ -359,9 +355,7 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
                                   _model.onlyeng = true;
                                 });
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'lsxbshmv' /* 영어 */,
-                              ),
+                              text: '영어',
                               options: FFButtonOptions(
                                 width: 70.0,
                                 height: 40.0,
@@ -396,9 +390,7 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
                                   _model.onlyeng = false;
                                 });
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'cghxm1xi' /* 영한 */,
-                              ),
+                              text: '영한',
                               options: FFButtonOptions(
                                 width: 70.0,
                                 height: 40.0,

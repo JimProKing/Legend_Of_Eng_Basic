@@ -97,9 +97,7 @@ class _WordWidgetState extends State<WordWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '8w6vwint' /* word */,
-                              ),
+                              'word',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -166,9 +164,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       }.withoutNulls,
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'b9suw7p1' /* Day1 */,
-                                  ),
+                                  text: 'Day1',
                                   options: FFButtonOptions(
                                     width: 100.0,
                                     height: 40.0,
@@ -217,9 +213,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       }.withoutNulls,
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    '6qt7w3x6' /* Day1 */,
-                                  ),
+                                  text: 'Day1',
                                   options: FFButtonOptions(
                                     width: 100.0,
                                     height: 40.0,
@@ -267,9 +261,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       'wordDay',
                                       queryParams: {
                                         'wordDay': serializeParam(
-                                          FFLocalizations.of(context).getText(
-                                            'vboy6yyz' /* 2 */,
-                                          ),
+                                          '',
                                           ParamType.String,
                                         ),
                                         'wd': serializeParam(
@@ -279,9 +271,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       }.withoutNulls,
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    '94yj8qqc' /* Day2 */,
-                                  ),
+                                  text: 'Day2',
                                   options: FFButtonOptions(
                                     width: 100.0,
                                     height: 40.0,
@@ -320,9 +310,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       'wordDay',
                                       queryParams: {
                                         'wordDay': serializeParam(
-                                          FFLocalizations.of(context).getText(
-                                            'a5mil6xt' /* 2 */,
-                                          ),
+                                          '',
                                           ParamType.String,
                                         ),
                                         'wd': serializeParam(
@@ -332,9 +320,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       }.withoutNulls,
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'fin5prf2' /* Day2 */,
-                                  ),
+                                  text: 'Day2',
                                   options: FFButtonOptions(
                                     width: 100.0,
                                     height: 40.0,
@@ -377,17 +363,13 @@ class _WordWidgetState extends State<WordWidget> {
                                       'wordDay',
                                       queryParams: {
                                         'wordDay': serializeParam(
-                                          FFLocalizations.of(context).getText(
-                                            'g4z4tur2' /* 3 */,
-                                          ),
+                                          '',
                                           ParamType.String,
                                         ),
                                       }.withoutNulls,
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    '5mam4u9e' /* Day3 */,
-                                  ),
+                                  text: 'Day3',
                                   options: FFButtonOptions(
                                     width: 100.0,
                                     height: 40.0,
@@ -426,9 +408,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       'wordDay',
                                       queryParams: {
                                         'wordDay': serializeParam(
-                                          FFLocalizations.of(context).getText(
-                                            'vuiklqq5' /* 3 */,
-                                          ),
+                                          '',
                                           ParamType.String,
                                         ),
                                         'wd': serializeParam(
@@ -438,9 +418,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       }.withoutNulls,
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'h7avzx1k' /* Day3 */,
-                                  ),
+                                  text: 'Day3',
                                   options: FFButtonOptions(
                                     width: 100.0,
                                     height: 40.0,
@@ -519,9 +497,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'hbcsvo40' /* Day4 */,
-                              ),
+                              text: 'Day4',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -569,9 +545,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'p3ivdxgo' /* Day4 */,
-                              ),
+                              text: 'Day4',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -626,9 +600,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'nhmm04mm' /* Day5 */,
-                              ),
+                              text: 'Day5',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -676,9 +648,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'oma92us9' /* Day5 */,
-                              ),
+                              text: 'Day5',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -733,9 +703,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'u0d9cu6a' /* Day6 */,
-                              ),
+                              text: 'Day6',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -783,9 +751,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'kmb9vg15' /* Day6 */,
-                              ),
+                              text: 'Day6',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -846,9 +812,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                '3a2kv0y2' /* Day7 */,
-                              ),
+                              text: 'Day7',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -896,9 +860,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'i3lh0gxf' /* Day7 */,
-                              ),
+                              text: 'Day7',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -953,9 +915,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'fc2x8drz' /* Day8 */,
-                              ),
+                              text: 'Day8',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1003,9 +963,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'ddwdqjm7' /* Day8 */,
-                              ),
+                              text: 'Day8',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1060,9 +1018,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'wq6bl345' /* Day9 */,
-                              ),
+                              text: 'Day9',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1110,9 +1066,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'miwnugmd' /* Day9 */,
-                              ),
+                              text: 'Day9',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1173,9 +1127,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                '0ucdd1qc' /* Day10 */,
-                              ),
+                              text: 'Day10',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1223,9 +1175,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '8p4kh9gq' /* Day10 */,
-                              ),
+                              text: 'Day10',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1280,9 +1230,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                '7iynuabr' /* Day11 */,
-                              ),
+                              text: 'Day11',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1330,9 +1278,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'ghadhck9' /* Day11 */,
-                              ),
+                              text: 'Day11',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1387,9 +1333,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'c3rrp7la' /* Day12 */,
-                              ),
+                              text: 'Day12',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1437,9 +1381,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'kz864yqq' /* Day12 */,
-                              ),
+                              text: 'Day12',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1503,9 +1445,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'dm6946xp' /* Day13 */,
-                              ),
+                              text: 'Day13',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1553,9 +1493,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'l78aueh4' /* Day13 */,
-                              ),
+                              text: 'Day13',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1610,9 +1548,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'grssbcvy' /* Day14 */,
-                              ),
+                              text: 'Day14',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1663,9 +1599,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '4c7tmy57' /*  Day14 */,
-                              ),
+                              text: ' Day14',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1720,9 +1654,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'l33b0yl5' /* Day15 */,
-                              ),
+                              text: 'Day15',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1770,9 +1702,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '9rl3jenc' /* Day15 */,
-                              ),
+                              text: 'Day15',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1833,9 +1763,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                '3rf0h4a0' /* Day16 */,
-                              ),
+                              text: 'Day16',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1883,9 +1811,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '9gg87zi5' /* Day16 */,
-                              ),
+                              text: 'Day16',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1940,9 +1866,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'obcjvr7u' /* Day17 */,
-                              ),
+                              text: 'Day17',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -1990,9 +1914,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '6isgzmhe' /* Day17 */,
-                              ),
+                              text: 'Day17',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2047,9 +1969,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'cx7yi70k' /* Day18 */,
-                              ),
+                              text: 'Day18',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2097,9 +2017,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'z08tar4m' /* Day18 */,
-                              ),
+                              text: 'Day18',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2160,9 +2078,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'ubfxa855' /* Day19 */,
-                              ),
+                              text: 'Day19',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2210,9 +2126,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '7gnr3xgr' /* Day19 */,
-                              ),
+                              text: 'Day19',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2267,9 +2181,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                '3nkqvs0o' /* Day20 */,
-                              ),
+                              text: 'Day20',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2317,9 +2229,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '8yvik7rz' /* Day20 */,
-                              ),
+                              text: 'Day20',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2374,9 +2284,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                's3gjz14v' /* Day21 */,
-                              ),
+                              text: 'Day21',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2424,9 +2332,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'rbwb4eba' /* Day21 */,
-                              ),
+                              text: 'Day21',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2487,9 +2393,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                '3xz6kdzy' /* Day22 */,
-                              ),
+                              text: 'Day22',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2537,9 +2441,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'pvvvpph1' /* Day22 */,
-                              ),
+                              text: 'Day22',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2594,9 +2496,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'goj8o9x9' /* Day23 */,
-                              ),
+                              text: 'Day23',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2644,9 +2544,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '0js7ubt1' /* Day23 */,
-                              ),
+                              text: 'Day23',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2701,9 +2599,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'rh9cn7kn' /* Day24 */,
-                              ),
+                              text: 'Day24',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2751,9 +2647,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '26qf69s7' /* Day24 */,
-                              ),
+                              text: 'Day24',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2814,9 +2708,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                '30essygl' /* Day25 */,
-                              ),
+                              text: 'Day25',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2864,9 +2756,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'o9bg9usw' /* Day25 */,
-                              ),
+                              text: 'Day25',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2921,9 +2811,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'gth8wzvd' /* Day26 */,
-                              ),
+                              text: 'Day26',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -2971,9 +2859,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'rx0wqdne' /* Day26 */,
-                              ),
+                              text: 'Day26',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3028,9 +2914,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'zwcwnwyg' /* Day27 */,
-                              ),
+                              text: 'Day27',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3078,9 +2962,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'b58civ1y' /* Day27 */,
-                              ),
+                              text: 'Day27',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3141,9 +3023,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'jdys7kay' /* Day28 */,
-                              ),
+                              text: 'Day28',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3191,9 +3071,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '1lqh09g8' /* Day28 */,
-                              ),
+                              text: 'Day28',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3248,9 +3126,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'eqcwzt0z' /* Day29 */,
-                              ),
+                              text: 'Day29',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3298,9 +3174,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                '3tm3e6n5' /* Day29 */,
-                              ),
+                              text: 'Day29',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3355,9 +3229,7 @@ class _WordWidgetState extends State<WordWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                              text: FFLocalizations.of(context).getText(
-                                'g3dnvfo4' /* Day30 */,
-                              ),
+                              text: 'Day30',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3405,9 +3277,7 @@ class _WordWidgetState extends State<WordWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'y6zubx3d' /* Day30 */,
-                              ),
+                              text: 'Day30',
                               options: FFButtonOptions(
                                 width: 100.0,
                                 height: 40.0,
@@ -3452,9 +3322,7 @@ class _WordWidgetState extends State<WordWidget> {
 
                             context.pushNamed('WordGreet');
                           },
-                          text: FFLocalizations.of(context).getText(
-                            'lkfkobom' /* 인사 메시지 */,
-                          ),
+                          text: '인사 메시지',
                           options: FFButtonOptions(
                             width: 340.0,
                             height: 40.0,

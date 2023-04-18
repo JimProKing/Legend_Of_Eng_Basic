@@ -99,9 +99,7 @@ class _L1WidgetState extends State<L1Widget> {
                             ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'ahjtlyro' /* week1 */,
-                            ),
+                            'week1',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -154,9 +152,7 @@ class _L1WidgetState extends State<L1Widget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         10.0, 10.0, 0.0, 20.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'ov0oagmn' /* 기본 문장 구조 */,
-                                      ),
+                                      '기본 문장 구조',
                                       style: FlutterFlowTheme.of(context)
                                           .headlineMedium
                                           .override(
@@ -203,9 +199,7 @@ class _L1WidgetState extends State<L1Widget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
-                              's02f7t2l' /*  완료 횟수 :  */,
-                            ),
+                            ' 완료 횟수 : ',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -243,9 +237,7 @@ class _L1WidgetState extends State<L1Widget> {
                       FFAppState().fL1B = 1;
                     });
                   },
-                  text: FFLocalizations.of(context).getText(
-                    '9ux1cwc9' /* finish */,
-                  ),
+                  text: 'finish',
                   options: FFButtonOptions(
                     width: 130.0,
                     height: 40.0,

@@ -8,7 +8,7 @@ final isProdPayments = false;
 // Test Braintree Credentials
 const kTestBraintreeTokenizationKey = 'sandbox_v2s4zr6z_jpvy75zpfzjzscp5';
 const kTestGoogleMerchantId = '';
-const kTestAppleMerchantId = '';
+const kTestAppleMerchantId = 'merchant.com.mycompany.helloflutterflow';
 
 // Production Braintree Credentials
 const kProdBraintreeTokenizationKey = '';

@@ -107,9 +107,7 @@ class _WordGreetWidgetState extends State<WordGreetWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 4.0, 0.0, 4.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              '2lhukad3' /* word 끝 */,
-                            ),
+                            'word 끝',
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -172,9 +170,7 @@ class _WordGreetWidgetState extends State<WordGreetWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        '7wrgtx76' /* 수고하셨습니다!! */,
-                                      ),
+                                      '수고하셨습니다!!',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -184,9 +180,7 @@ class _WordGreetWidgetState extends State<WordGreetWidget> {
                                           ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'lcduy2mc' /* 여러분들은 이제 고1 시기까지 필수적으로 알아야 할 모... */,
-                                      ),
+                                      '여러분들은 이제 고1 시기까지 필수적으로 알아야 할 모든 어휘량을 학습하셨습니다.\n\n하지만, 어휘량을 늘리는 과정은 더욱 더 필요합니다. 실제 고1까지 필요한 어휘량은 1200개, 고3 수능 응시시 1등급을 확정적으로 받기 위한 최소 어휘량은 5000개, 토익 시험에서 900점 이상을 받기 위한 어휘량은 약 8000개 입니다.\n\n 지금은 이 양이 많아보이시겠지만, 꾸준함을 가지고 성실하게 임하면 된다는 것을, 이 메시지를 보시는 여러분들은 느낌적으로 깨달았으리라 생각합니다.\n\n 여러분들의 영어공부를 진심으로 응원하며, 여기까지 와주신 노력에 진심으로 감사합니다.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),
@@ -221,9 +215,7 @@ class _WordGreetWidgetState extends State<WordGreetWidget> {
 
                                   context.pushNamed('HomePage');
                                 },
-                          text: FFLocalizations.of(context).getText(
-                            '2zkxpfma' /* finish */,
-                          ),
+                          text: 'finish',
                           options: FFButtonOptions(
                             width: 130.0,
                             height: 40.0,

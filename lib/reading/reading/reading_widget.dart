@@ -98,9 +98,7 @@ class _ReadingWidgetState extends State<ReadingWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'tpgfo7mc' /* Reading */,
-                              ),
+                              'Reading',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -187,9 +185,7 @@ class _ReadingWidgetState extends State<ReadingWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 5.0, 0.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'avkhfpoa' /* Level */,
-                                ),
+                                'Level',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -239,9 +235,7 @@ class _ReadingWidgetState extends State<ReadingWidget> {
                                                 }.withoutNulls,
                                               );
                                             },
-                                      text: FFLocalizations.of(context).getText(
-                                        '0tv944o5' /* Start! */,
-                                      ),
+                                      text: 'Start!',
                                       options: FFButtonOptions(
                                         width: 230.0,
                                         height: 40.0,
@@ -285,9 +279,7 @@ class _ReadingWidgetState extends State<ReadingWidget> {
 
                                         context.pushNamed('ReadingMain');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'z7ikk0g9' /* Start! */,
-                                      ),
+                                      text: 'Start!',
                                       options: FFButtonOptions(
                                         width: 230.0,
                                         height: 40.0,
@@ -342,9 +334,7 @@ class _ReadingWidgetState extends State<ReadingWidget> {
 
                             context.pushNamed('ROT');
                           },
-                          text: FFLocalizations.of(context).getText(
-                            'fqmneqri' /* 앞으로의 방향성 */,
-                          ),
+                          text: '앞으로의 방향성',
                           options: FFButtonOptions(
                             width: 340.0,
                             height: 40.0,

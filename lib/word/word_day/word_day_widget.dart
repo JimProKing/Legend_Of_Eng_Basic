@@ -115,9 +115,7 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'fxf7v0gc' /* Day */,
-                              ),
+                              'Day',
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -585,9 +583,7 @@ class _WordDayWidgetState extends State<WordDayWidget> {
                                   }.withoutNulls,
                                 );
                               },
-                        text: FFLocalizations.of(context).getText(
-                          'dbttsgjv' /* Go exam */,
-                        ),
+                        text: 'Go exam',
                         options: FFButtonOptions(
                           width: 130.0,
                           height: 40.0,

@@ -97,9 +97,7 @@ class _IntroduceWidgetState extends State<IntroduceWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          '8hx2w03c' /* 앱 소개 */,
-                        ),
+                        '앱 소개',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Nanum Gothic',
@@ -133,9 +131,7 @@ class _IntroduceWidgetState extends State<IntroduceWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 10.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'tvym3foy' /* 영어의전설_기본편 */,
-                      ),
+                      '영어의전설_기본편',
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
                                 fontFamily: 'Roboto Mono',
@@ -180,9 +176,7 @@ class _IntroduceWidgetState extends State<IntroduceWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 10.0, 10.0, 10.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'w5r299l7' /* 영어공부를 시작하려고 해도, 대부분의 사람들은 기본기가... */,
-                                  ),
+                                  '영어공부를 시작하려고 해도, 대부분의 사람들은 기본기가 부족해 시행착오를 겪게 되며 공부방법을 바꿔가는 비효율적인 과정을 겪게 됩니다.\n\n영어의 4가지 영역(Reading, Listening, Writing, Speaking)이 모두 \'다른 과목\' 이라는 것을 인지하고, 내가 원하는 것이 무엇인지를 분명하게 한 후 영어공부를 하는 것이 가장 효율적입니다.\n\nLA에서 10년을 살고도 영어로 말을 못하는 사람이 있는 반면, 한국에서 독학했음에도 외국인과 유창하게 대화하는 사람도 있습니다. 필자도 또한 한국에서 나고 자랐지만 연습만으로 프리토킹이 가능하게 되었습니다.\n\n수능, 토익, 오픽 등의 고난이도의 영어시험을 준비하기에 앞서, 기본기가 부족하신 분들을 위해 기본편을 먼저 제작하였습니다. 기본편의 단어수준은 한국 교육과정 기준 초-중등 수준이며, 수능과 같은 더 높은 수준의 시험을 위해서는 그에 걸맞는 수준의 단어를 추가적으로 학습해야 합니다.\n(수능편, 토익편, 오픽편에서 필요한 단어들을 추가로 구성해 두었습니다.)\n\n영어 기본기 체화에 있어서는 어떤 목적으로 공부를 하더라도 충분히 이 어플리케이션 만으로도 학습이 충분할 것임을 자신드립니다.',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -200,9 +194,7 @@ class _IntroduceWidgetState extends State<IntroduceWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'b07ek1m7' /* * 기본문법 및 문장패턴만 빠르게 정리하고 싶으신 분들... */,
-                              ),
+                              '* 기본문법 및 문장패턴만 빠르게 정리하고 싶으신 분들은 기본편의 Word 및 Listening을 스킵하시는 것을 권장드립니다.\n(수능영어 2등급 이상 경험자)\n\n기본편의 Word 및 Listening은 영어에 기초가 전혀 없는 사람들을 기준으로 구성되어 있습니다.\n\n\n\n\n\n\n\n\n\n\n\n',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -215,9 +207,7 @@ class _IntroduceWidgetState extends State<IntroduceWidget> {
                             ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'u934lo5y' /* Hello World */,
-                            ),
+                            'Hello World',
                             style: FlutterFlowTheme.of(context).bodyMedium,
                           ),
                         ],

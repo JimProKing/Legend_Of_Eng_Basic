@@ -99,9 +99,7 @@ class _L3WidgetState extends State<L3Widget> {
                             ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'vuo102wy' /* Week3 */,
-                            ),
+                            'Week3',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -144,9 +142,7 @@ class _L3WidgetState extends State<L3Widget> {
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 10.0, 0.0, 10.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'ebd33jan' /* 관계사 */,
-                          ),
+                          '관계사',
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -185,9 +181,7 @@ class _L3WidgetState extends State<L3Widget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'bc0ti37a' /*  완료 횟수 :  */,
-                              ),
+                              ' 완료 횟수 : ',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -226,9 +220,7 @@ class _L3WidgetState extends State<L3Widget> {
                       FFAppState().fL3B = 1;
                     });
                   },
-                  text: FFLocalizations.of(context).getText(
-                    '5hgzd10p' /* finish */,
-                  ),
+                  text: 'finish',
                   options: FFButtonOptions(
                     width: 130.0,
                     height: 40.0,
