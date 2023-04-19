@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'course_model.dart';
@@ -91,20 +92,21 @@ class _CourseWidgetState extends State<CourseWidget> {
                               },
                             ),
                           ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 4.0, 0.0, 4.0),
+                            child: Text(
+                              '시리즈',
+                              style: FlutterFlowTheme.of(context)
+                                  .headlineSmall
+                                  .override(
+                                    fontFamily: 'Nanum Gothic',
+                                    color: Color(0xFF57636C),
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                            ),
+                          ),
                         ],
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
-                      child: Text(
-                        '커리큘럼',
-                        style:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Nanum Gothic',
-                                  color: Color(0xFF57636C),
-                                  fontWeight: FontWeight.w600,
-                                ),
                       ),
                     ),
                   ],
@@ -195,43 +197,126 @@ class _CourseWidgetState extends State<CourseWidget> {
                         itemBuilder: (context, listViewIndex) {
                           final listViewSeriesRow =
                               listViewSeriesRowList[listViewIndex];
-                          return Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    10.0, 10.0, 10.0, 0.0),
-                                child: Text(
-                                  listViewSeriesRow.main,
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Roboto Mono',
-                                        color: FlutterFlowTheme.of(context)
-                                            .black600,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 0.0, 10.0, 0.0),
-                                child: Text(
-                                  valueOrDefault<String>(
-                                    listViewSeriesRow.content,
-                                    '1',
+                          return Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 5.0, 0.0, 10.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10.0, 10.0, 10.0, 0.0),
+                                  child: Text(
+                                    listViewSeriesRow.main,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Roboto Mono',
+                                          color: FlutterFlowTheme.of(context)
+                                              .black600,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Roboto Mono',
-                                        color: Color(0xFF61686E),
-                                        fontWeight: FontWeight.w600,
-                                      ),
                                 ),
-                              ),
-                            ],
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 0.0, 10.0, 0.0),
+                                      child: Text(
+                                        valueOrDefault<String>(
+                                          listViewSeriesRow.content,
+                                          '1',
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Roboto Mono',
+                                              color: Color(0xFF61686E),
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 10.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 5.0, 0.0),
+                                              child: FlutterFlowIconButton(
+                                                borderColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                                borderRadius: 20.0,
+                                                borderWidth: 2.0,
+                                                buttonSize: 50.0,
+                                                fillColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.google,
+                                                  color: Color(0xFF2222E6),
+                                                  size: 30.0,
+                                                ),
+                                                onPressed: () async {
+                                                  logFirebaseEvent(
+                                                      'COURSE_PAGE_google_ICN_ON_TAP');
+                                                  logFirebaseEvent(
+                                                      'IconButton_launch_u_r_l');
+                                                  await launchURL(
+                                                      listViewSeriesRow
+                                                          .google!);
+                                                },
+                                              ),
+                                            ),
+                                            FlutterFlowIconButton(
+                                              borderColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              borderRadius: 20.0,
+                                              borderWidth: 2.0,
+                                              buttonSize: 50.0,
+                                              icon: FaIcon(
+                                                FontAwesomeIcons.apple,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .engineeringOrange,
+                                                size: 30.0,
+                                              ),
+                                              onPressed: () async {
+                                                logFirebaseEvent(
+                                                    'COURSE_PAGE_apple_ICN_ON_TAP');
+                                                logFirebaseEvent(
+                                                    'IconButton_launch_u_r_l');
+                                                await launchURL(
+                                                    listViewSeriesRow.apple!);
+                                              },
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Divider(
+                                  thickness: 2.5,
+                                  color: FlutterFlowTheme.of(context).accent4,
+                                ),
+                              ],
+                            ),
                           );
                         },
                       );

@@ -211,6 +211,8 @@ dynamic deserializeParam<T>(
             return CouponRow(data);
           case UserRow:
             return UserRow(data);
+          case MeRow:
+            return MeRow(data);
           case SeriesRow:
             return SeriesRow(data);
           case WordMemoRow:

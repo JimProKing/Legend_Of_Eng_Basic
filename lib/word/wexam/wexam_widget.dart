@@ -1,9 +1,11 @@
 import '/backend/supabase/supabase.dart';
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/storage/input_word/input_word_widget.dart';
+import '/flutter_flow/admob_util.dart' as admob;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -104,7 +106,7 @@ class _WexamWidgetState extends State<WexamWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.22),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -117,6 +119,13 @@ class _WexamWidgetState extends State<WexamWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
+                      ),
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
@@ -585,23 +594,18 @@ class _WexamWidgetState extends State<WexamWidget> {
                             : () async {
                                 logFirebaseEvent(
                                     'WEXAM_PAGE_FINISH_BTN_ON_TAP');
+                                var _shouldSetState = false;
+                                logFirebaseEvent('Button_ad_mob');
+
+                                _model.exAdSuccess =
+                                    await admob.showInterstitialAd();
+
+                                _shouldSetState = true;
                                 if (_model.cC == 30) {
-                                  logFirebaseEvent('Button_update_app_state');
-                                  setState(() {
-                                    FFAppState().fwn = FFAppState().fwn + 1;
-                                  });
                                   logFirebaseEvent('Button_update_app_state');
                                   setState(() {
                                     FFAppState().addToFwns(widget.wordDay!);
                                   });
-                                  logFirebaseEvent('Button_update_app_state');
-                                  setState(() {
-                                    FFAppState().fwnD =
-                                        FFAppState().fwnD + 0.033333;
-                                  });
-                                  logFirebaseEvent('Button_navigate_to');
-
-                                  context.pushNamed('Word');
                                 } else {
                                   logFirebaseEvent('Button_alert_dialog');
                                   await showDialog(
@@ -609,7 +613,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
                                         title: Text('시험 미완료'),
-                                        content: Text('문제를 다 풀고 끝마쳐주세요!'),
+                                        content: Text('문제를 다 풀어주세요!'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
@@ -620,8 +624,15 @@ class _WexamWidgetState extends State<WexamWidget> {
                                       );
                                     },
                                   );
+                                  if (_shouldSetState) setState(() {});
                                   return;
                                 }
+
+                                logFirebaseEvent('Button_navigate_to');
+
+                                context.pushNamed('Word');
+
+                                if (_shouldSetState) setState(() {});
                               },
                         text: 'finish',
                         options: FFButtonOptions(

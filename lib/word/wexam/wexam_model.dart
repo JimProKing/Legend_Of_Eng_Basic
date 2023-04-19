@@ -1,9 +1,11 @@
 import '/backend/supabase/supabase.dart';
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/storage/input_word/input_word_widget.dart';
+import '/flutter_flow/admob_util.dart' as admob;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -28,11 +30,22 @@ class WexamModel extends FlutterFlowModel {
 
   String? temp = 'a';
 
+  ///  State fields for stateful widgets in this page.
+
+  // Model for banner component.
+  late BannerModel bannerModel;
+  // Stores action output result for [AdMob - Show Interstitial Ad] action in Button widget.
+  bool? exAdSuccess;
+
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    bannerModel = createModel(context, () => BannerModel());
+  }
 
-  void dispose() {}
+  void dispose() {
+    bannerModel.dispose();
+  }
 
   /// Additional helper methods are added here.
 

@@ -1,4 +1,5 @@
 import '/backend/supabase/supabase.dart';
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -69,7 +70,7 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.22),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -82,6 +83,13 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
+                      ),
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
@@ -406,7 +414,7 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                                               height: MediaQuery.of(context)
                                                       .size
                                                       .height *
-                                                  0.09,
+                                                  0.07,
                                               decoration: BoxDecoration(
                                                 color:
                                                     FlutterFlowTheme.of(context)
@@ -434,9 +442,9 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .height *
-                                                            0.09,
+                                                            0.07,
                                                     decoration: BoxDecoration(
-                                                      color: Color(0xFFEDF2F8),
+                                                      color: Color(0xFFEEEEDB),
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               10.0),
@@ -456,11 +464,11 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                                                       children: [
                                                         FlutterFlowIconButton(
                                                           borderColor:
-                                                              Color(0xFFEFF4E0),
+                                                              Color(0xFFEEEEDB),
                                                           borderRadius: 30.0,
                                                           buttonSize: 50.0,
                                                           fillColor:
-                                                              Color(0xFFEDF2F8),
+                                                              Color(0xFFEEEEDB),
                                                           icon: Icon(
                                                             Icons
                                                                 .play_arrow_rounded,
@@ -509,7 +517,7 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                                                                         .pkno))
                                                               FlutterFlowIconButton(
                                                                 borderColor: Color(
-                                                                    0xFFEFF4E0),
+                                                                    0xFFEEEEDB),
                                                                 borderRadius:
                                                                     30.0,
                                                                 borderWidth:
@@ -517,7 +525,7 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                                                                 buttonSize:
                                                                     50.0,
                                                                 fillColor: Color(
-                                                                    0xFFEDF2F8),
+                                                                    0xFFEEEEDB),
                                                                 icon: Icon(
                                                                   Icons
                                                                       .favorite_border,
@@ -546,7 +554,7 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                                                                         .pkno))
                                                               FlutterFlowIconButton(
                                                                 borderColor: Color(
-                                                                    0xFFEFF4E0),
+                                                                    0xFFEEEEDB),
                                                                 borderRadius:
                                                                     30.0,
                                                                 borderWidth:
@@ -554,7 +562,7 @@ class _StordedWordsWidgetState extends State<StordedWordsWidget> {
                                                                 buttonSize:
                                                                     50.0,
                                                                 fillColor: Color(
-                                                                    0xFFEDF2F8),
+                                                                    0xFFEEEEDB),
                                                                 icon: Icon(
                                                                   Icons
                                                                       .favorite_sharp,

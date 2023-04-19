@@ -22,4 +22,10 @@ class SeriesRow extends SupabaseDataRow {
 
   int? get order => getField<int>('order');
   set order(int? value) => setField<int>('order', value);
+
+  String? get google => getField<String>('google');
+  set google(String? value) => setField<String>('google', value);
+
+  String? get apple => getField<String>('apple');
+  set apple(String? value) => setField<String>('apple', value);
 }

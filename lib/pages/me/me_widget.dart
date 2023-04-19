@@ -1,3 +1,4 @@
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -64,7 +65,7 @@ class _MeWidgetState extends State<MeWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.22),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -77,6 +78,13 @@ class _MeWidgetState extends State<MeWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
+                      ),
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),

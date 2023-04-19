@@ -1,9 +1,11 @@
-import '/components/payment_widget.dart';
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/admob_util.dart' as admob;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +31,13 @@ class _ListeningWidgetState extends State<ListeningWidget> {
     _model = createModel(context, () => ListeningModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Listening'});
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      logFirebaseEvent('LISTENING_PAGE_Listening_ON_INIT_STATE');
+      logFirebaseEvent('Listening_ad_mob');
+
+      _model.interstitialAdSuccessL = await admob.showInterstitialAd();
+    });
   }
 
   @override
@@ -50,7 +59,7 @@ class _ListeningWidgetState extends State<ListeningWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.2),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -63,6 +72,13 @@ class _ListeningWidgetState extends State<ListeningWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
+                      ),
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
@@ -129,12 +145,6 @@ class _ListeningWidgetState extends State<ListeningWidget> {
                   thickness: 50.0,
                   color: Color(0xFFE7CFCF),
                 ),
-                if (FFAppState().payed == 0)
-                  wrapWithModel(
-                    model: _model.paymentModel,
-                    updateCallback: () => setState(() {}),
-                    child: PaymentWidget(),
-                  ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 15.0, 5.0),
                   child: FFButtonWidget(
@@ -152,7 +162,7 @@ class _ListeningWidgetState extends State<ListeningWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0xFFC3DCD8),
+                      color: FlutterFlowTheme.of(context).papayaWhip,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Roboto Mono',
@@ -162,7 +172,7 @@ class _ListeningWidgetState extends State<ListeningWidget> {
                               ),
                       elevation: 2.0,
                       borderSide: BorderSide(
-                        color: Color(0xFFE7E987),
+                        color: FlutterFlowTheme.of(context).black600,
                         width: 3.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),

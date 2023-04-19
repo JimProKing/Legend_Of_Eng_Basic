@@ -97,16 +97,20 @@ class _HTUContentWidgetState extends State<HTUContentWidget> {
                               },
                             ),
                           ),
-                          Text(
-                            '사용방법',
-                            style: FlutterFlowTheme.of(context)
-                                .headlineMedium
-                                .override(
-                                  fontFamily: 'Roboto Mono',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBtnText,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              '사용방법',
+                              style: FlutterFlowTheme.of(context)
+                                  .headlineMedium
+                                  .override(
+                                    fontFamily: 'Roboto Mono',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                            ),
                           ),
                         ],
                       ),

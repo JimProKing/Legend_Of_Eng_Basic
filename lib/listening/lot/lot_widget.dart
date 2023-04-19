@@ -1,3 +1,4 @@
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -48,7 +49,7 @@ class _LotWidgetState extends State<LotWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.2),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -61,50 +62,53 @@ class _LotWidgetState extends State<LotWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: Color(0xFFE2C2A2),
-                              borderRadius: 0.0,
-                              buttonSize: 50.0,
-                              fillColor: Color(0xFFE2C2A2),
-                              icon: Icon(
-                                Icons.backspace,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryBtnText,
-                                size: 30.0,
-                              ),
-                              showLoadingIndicator: true,
-                              onPressed: () async {
-                                logFirebaseEvent(
-                                    'LOT_PAGE_backspace_ICN_ON_TAP');
-                                logFirebaseEvent('IconButton_navigate_back');
-                                context.pop();
-                              },
-                            ),
-                          ),
-                        ],
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
                       ),
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
-                      child: Text(
-                        'Listening O/T',
-                        style:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              12.0, 0.0, 0.0, 0.0),
+                          child: FlutterFlowIconButton(
+                            borderColor: Color(0xFFE2C2A2),
+                            borderRadius: 0.0,
+                            buttonSize: 50.0,
+                            fillColor: Color(0xFFE2C2A2),
+                            icon: Icon(
+                              Icons.backspace,
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              size: 30.0,
+                            ),
+                            showLoadingIndicator: true,
+                            onPressed: () async {
+                              logFirebaseEvent('LOT_PAGE_backspace_ICN_ON_TAP');
+                              logFirebaseEvent('IconButton_navigate_back');
+                              context.pop();
+                            },
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              12.0, 4.0, 0.0, 4.0),
+                          child: Text(
+                            'Listening O/T',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineSmall
+                                .override(
                                   fontFamily: 'Nanum Gothic',
                                   color: Color(0xFF57636C),
                                   fontWeight: FontWeight.w600,
                                 ),
-                      ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

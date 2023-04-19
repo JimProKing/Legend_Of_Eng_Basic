@@ -1,8 +1,8 @@
-import '/backend/braintree/payment_manager.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/admob_util.dart' as admob;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -91,64 +91,13 @@ class _PaymentWidgetState extends State<PaymentWidget> {
             if (FFAppState().payed == 0)
               FFButtonWidget(
                 onPressed: () async {
-                  logFirebaseEvent('PAYMENT_COMP_7,700원_BTN_ON_TAP');
-                  logFirebaseEvent('Button_braintree_payment');
-                  final transacAmount = 7700.0;
-                  final transacDisplayName = 'payment';
-                  if (kIsWeb) {
-                    showSnackbar(context, 'Payments not yet supported on web.');
-                    return;
-                  }
-
-                  final dropInRequest = BraintreeDropInRequest(
-                    cardEnabled: true,
-                    clientToken: braintreeClientToken(),
-                    collectDeviceData: true,
-                    paypalRequest: BraintreePayPalRequest(
-                      amount: transacAmount.toString(),
-                      currencyCode: 'KRW',
-                      displayName: transacDisplayName,
-                    ),
-                    applePayRequest: BraintreeApplePayRequest(
-                      amount: transacAmount,
-                      currencyCode: 'KRW',
-                      countryCode: 'KO',
-                      displayName: transacDisplayName,
-                      appleMerchantID: appleMerchantId(),
-                    ),
-                  );
-                  final dropInResult =
-                      await BraintreeDropIn.start(dropInRequest);
-                  if (dropInResult == null) {
-                    return;
-                  }
-                  showSnackbar(
-                    context,
-                    'Processing payment...',
-                    duration: 10,
-                    loading: true,
-                  );
-                  final paymentResponse = await processBraintreePayment(
-                    transacAmount,
-                    dropInResult.paymentMethodNonce.nonce,
-                    dropInResult.deviceData,
-                  );
-                  if (paymentResponse.errorMessage != null) {
-                    showSnackbar(
-                        context, 'Error: ${paymentResponse.errorMessage}');
-                    return;
-                  }
-                  showSnackbar(context, 'Success!');
-                  _model.transactionId = paymentResponse.transactionId!;
-
+                  logFirebaseEvent('PAYMENT_COMP_무료_BTN_ON_TAP');
                   logFirebaseEvent('Button_update_app_state');
                   setState(() {
                     FFAppState().payed = 1;
                   });
-
-                  setState(() {});
                 },
-                text: '7,700원',
+                text: '무료',
                 icon: FaIcon(
                   FontAwesomeIcons.moneyBillAlt,
                 ),
@@ -276,6 +225,13 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                           child: FFButtonWidget(
                             onPressed: () async {
                               logFirebaseEvent('PAYMENT_COMP_쿠폰_BTN_ON_TAP');
+                              var _shouldSetState = false;
+                              logFirebaseEvent('Button_ad_mob');
+
+                              _model.interstitialAdSuccess =
+                                  await admob.showInterstitialAd();
+
+                              _shouldSetState = true;
                               if ((_model.textController.text ==
                                       containerCouponRow?.content) ||
                                   (_model.textController.text ==
@@ -305,6 +261,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
 
                                 context.pushNamed('HomePage');
 
+                                if (_shouldSetState) setState(() {});
                                 return;
                               } else {
                                 logFirebaseEvent('Button_alert_dialog');
@@ -324,8 +281,11 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                     );
                                   },
                                 );
+                                if (_shouldSetState) setState(() {});
                                 return;
                               }
+
+                              if (_shouldSetState) setState(() {});
                             },
                             text: '쿠폰',
                             options: FFButtonOptions(

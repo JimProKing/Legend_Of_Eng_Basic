@@ -325,6 +325,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               dayNo: params.getParam('dayNo', ParamType.String),
             ),
           ),
+        ),
+        FFRoute(
+          name: 'adBanner',
+          path: '/adBanner',
+          builder: (context, params) => AdBannerWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,

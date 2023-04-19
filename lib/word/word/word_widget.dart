@@ -1,10 +1,12 @@
-import '/components/payment_widget.dart';
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/admob_util.dart' as admob;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -30,6 +32,13 @@ class _WordWidgetState extends State<WordWidget> {
     _model = createModel(context, () => WordModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Word'});
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      logFirebaseEvent('WORD_PAGE_Word_ON_INIT_STATE');
+      logFirebaseEvent('Word_ad_mob');
+
+      _model.interstitialAdSuccessW = await admob.showInterstitialAd();
+    });
   }
 
   @override
@@ -51,7 +60,7 @@ class _WordWidgetState extends State<WordWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.2),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -64,6 +73,13 @@ class _WordWidgetState extends State<WordWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
+                      ),
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
@@ -261,7 +277,7 @@ class _WordWidgetState extends State<WordWidget> {
                                       'wordDay',
                                       queryParams: {
                                         'wordDay': serializeParam(
-                                          '',
+                                          '2',
                                           ParamType.String,
                                         ),
                                         'wd': serializeParam(
@@ -357,17 +373,28 @@ class _WordWidgetState extends State<WordWidget> {
                                   onPressed: () async {
                                     logFirebaseEvent(
                                         'WORD_PAGE_DAY3_BTN_ON_TAP');
+                                    logFirebaseEvent('Button_ad_mob');
+
+                                    _model.interstitialAd =
+                                        await admob.showInterstitialAd();
+
                                     logFirebaseEvent('Button_navigate_to');
 
                                     context.pushNamed(
                                       'wordDay',
                                       queryParams: {
                                         'wordDay': serializeParam(
-                                          '',
+                                          '3',
                                           ParamType.String,
+                                        ),
+                                        'wd': serializeParam(
+                                          3,
+                                          ParamType.int,
                                         ),
                                       }.withoutNulls,
                                     );
+
+                                    setState(() {});
                                   },
                                   text: 'Day3',
                                   options: FFButtonOptions(
@@ -452,14 +479,6 @@ class _WordWidgetState extends State<WordWidget> {
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
-                        child: Visibility(
-                          visible: FFAppState().payed == 0,
-                          child: wrapWithModel(
-                            model: _model.paymentModel,
-                            updateCallback: () => setState(() {}),
-                            child: PaymentWidget(),
-                          ),
                         ),
                       ),
                   ],
@@ -687,6 +706,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY6_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess2 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -702,6 +726,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day6',
                               options: FFButtonOptions(
@@ -1002,6 +1028,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY9_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess3 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -1017,6 +1048,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day9',
                               options: FFButtonOptions(
@@ -1317,6 +1350,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY12_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess4 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -1332,6 +1370,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day12',
                               options: FFButtonOptions(
@@ -1638,6 +1678,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY15_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess5 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -1653,6 +1698,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day15',
                               options: FFButtonOptions(
@@ -1953,6 +2000,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY18_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess6 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -1968,6 +2020,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day18',
                               options: FFButtonOptions(
@@ -2268,6 +2322,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY21_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess7 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -2283,6 +2342,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day21',
                               options: FFButtonOptions(
@@ -2583,6 +2644,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY24_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess8 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -2598,6 +2664,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day24',
                               options: FFButtonOptions(
@@ -2898,6 +2966,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY27_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess9 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -2913,6 +2986,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day27',
                               options: FFButtonOptions(
@@ -3213,6 +3288,11 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY30_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess10 =
+                                          await admob.showInterstitialAd();
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed(
@@ -3228,6 +3308,8 @@ class _WordWidgetState extends State<WordWidget> {
                                           ),
                                         }.withoutNulls,
                                       );
+
+                                      setState(() {});
                                     },
                               text: 'Day30',
                               options: FFButtonOptions(

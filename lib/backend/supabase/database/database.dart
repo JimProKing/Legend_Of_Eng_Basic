@@ -9,5 +9,6 @@ export 'tables/reading_table.dart';
 export 'tables/word_table.dart';
 export 'tables/coupon.dart';
 export 'tables/user.dart';
+export 'tables/me.dart';
 export 'tables/series.dart';
 export 'tables/word_memo.dart';

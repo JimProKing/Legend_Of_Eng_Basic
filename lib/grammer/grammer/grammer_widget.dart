@@ -1,9 +1,11 @@
-import '/components/payment_widget.dart';
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/admob_util.dart' as admob;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +31,13 @@ class _GrammerWidgetState extends State<GrammerWidget> {
     _model = createModel(context, () => GrammerModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Grammer'});
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      logFirebaseEvent('GRAMMER_PAGE_Grammer_ON_INIT_STATE');
+      logFirebaseEvent('Grammer_ad_mob');
+
+      _model.interstitialAdSuccessG = await admob.showInterstitialAd();
+    });
   }
 
   @override
@@ -50,7 +59,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.22),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -63,6 +72,13 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
+                      ),
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
@@ -132,14 +148,6 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                 Container(
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                  ),
-                  child: Visibility(
-                    visible: FFAppState().payed == 0,
-                    child: wrapWithModel(
-                      model: _model.paymentModel,
-                      updateCallback: () => setState(() {}),
-                      child: PaymentWidget(),
-                    ),
                   ),
                 ),
                 Padding(

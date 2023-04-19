@@ -1,3 +1,4 @@
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -12,11 +13,20 @@ class WordGreetModel extends FlutterFlowModel {
 
   bool? onlyeng = true;
 
+  ///  State fields for stateful widgets in this page.
+
+  // Model for banner component.
+  late BannerModel bannerModel;
+
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    bannerModel = createModel(context, () => BannerModel());
+  }
 
-  void dispose() {}
+  void dispose() {
+    bannerModel.dispose();
+  }
 
   /// Additional helper methods are added here.
 

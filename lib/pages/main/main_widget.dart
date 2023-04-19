@@ -1,7 +1,9 @@
+import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/admob_util.dart' as admob;
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +51,7 @@ class _MainWidgetState extends State<MainWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.2),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -62,6 +64,13 @@ class _MainWidgetState extends State<MainWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: wrapWithModel(
+                        model: _model.bannerModel,
+                        updateCallback: () => setState(() {}),
+                        child: BannerWidget(),
+                      ),
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
@@ -166,6 +175,14 @@ class _MainWidgetState extends State<MainWidget> {
                                     onPressed: () async {
                                       logFirebaseEvent(
                                           'MAIN_PAGE_WORD_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      admob.loadInterstitialAd(
+                                        "",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed('Word');
@@ -210,6 +227,14 @@ class _MainWidgetState extends State<MainWidget> {
                                   onPressed: () async {
                                     logFirebaseEvent(
                                         'MAIN_PAGE_LISTENING_BTN_ON_TAP');
+                                    logFirebaseEvent('Button_ad_mob');
+
+                                    admob.loadInterstitialAd(
+                                      "",
+                                      "ca-app-pub-8145739580879928/3950518912",
+                                      true,
+                                    );
+
                                     logFirebaseEvent('Button_navigate_to');
 
                                     context.pushNamed('Listening');
@@ -255,6 +280,14 @@ class _MainWidgetState extends State<MainWidget> {
                                     onPressed: () async {
                                       logFirebaseEvent(
                                           'MAIN_PAGE_READING_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      admob.loadInterstitialAd(
+                                        "",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed('Reading');
@@ -300,6 +333,14 @@ class _MainWidgetState extends State<MainWidget> {
                                 onPressed: () async {
                                   logFirebaseEvent(
                                       'MAIN_PAGE_GRAMMER_BTN_ON_TAP');
+                                  logFirebaseEvent('Button_ad_mob');
+
+                                  admob.loadInterstitialAd(
+                                    "",
+                                    "ca-app-pub-8145739580879928/3950518912",
+                                    true,
+                                  );
+
                                   logFirebaseEvent('Button_navigate_to');
 
                                   context.pushNamed('Grammer');
