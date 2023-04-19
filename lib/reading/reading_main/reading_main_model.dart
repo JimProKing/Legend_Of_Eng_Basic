@@ -19,6 +19,8 @@ class ReadingMainModel extends FlutterFlowModel {
 
   // Model for banner component.
   late BannerModel bannerModel;
+  // Stores action output result for [AdMob - Show Interstitial Ad] action in Button widget.
+  bool? interstitialAdSuccess;
 
   /// Initialization and disposal methods.
 

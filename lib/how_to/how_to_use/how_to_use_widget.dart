@@ -1,5 +1,4 @@
 import '/components/banner_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -76,29 +75,6 @@ class _HowToUseWidgetState extends State<HowToUseWidget> {
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: Color(0xFFE2C2A2),
-                              borderRadius: 0.0,
-                              buttonSize: 50.0,
-                              fillColor: Color(0xFFE2C2A2),
-                              icon: Icon(
-                                Icons.backspace,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryBtnText,
-                                size: 30.0,
-                              ),
-                              showLoadingIndicator: true,
-                              onPressed: () async {
-                                logFirebaseEvent(
-                                    'HOW_TO_USE_PAGE_backspace_ICN_ON_TAP');
-                                logFirebaseEvent('IconButton_navigate_back');
-                                context.pop();
-                              },
-                            ),
-                          ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),

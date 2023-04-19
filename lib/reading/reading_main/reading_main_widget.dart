@@ -309,10 +309,15 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
                                       logFirebaseEvent('Button_ad_mob');
 
                                       admob.loadInterstitialAd(
-                                        "",
+                                        "ca-app-pub-8145739580879928/1695018528",
                                         "ca-app-pub-8145739580879928/3950518912",
                                         true,
                                       );
+
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      _model.interstitialAdSuccess =
+                                          await admob.showInterstitialAd();
 
                                       logFirebaseEvent(
                                           'Button_update_app_state');
@@ -322,6 +327,8 @@ class _ReadingMainWidgetState extends State<ReadingMainWidget> {
                                       logFirebaseEvent('Button_navigate_to');
 
                                       context.pushNamed('Reading');
+
+                                      setState(() {});
                                     },
                               text: 'finish',
                               options: FFButtonOptions(

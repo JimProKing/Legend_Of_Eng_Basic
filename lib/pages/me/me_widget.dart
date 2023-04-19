@@ -93,29 +93,6 @@ class _MeWidgetState extends State<MeWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: Color(0xFFE2C2A2),
-                              borderRadius: 0.0,
-                              buttonSize: 50.0,
-                              fillColor: Color(0xFFE2C2A2),
-                              icon: Icon(
-                                Icons.backspace,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryBtnText,
-                                size: 30.0,
-                              ),
-                              showLoadingIndicator: true,
-                              onPressed: () async {
-                                logFirebaseEvent(
-                                    'ME_PAGE_backspace_ICN_ON_TAP');
-                                logFirebaseEvent('IconButton_navigate_back');
-                                context.pop();
-                              },
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
                               '영어의 전설',

@@ -1,5 +1,4 @@
 import '/components/banner_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -79,29 +78,6 @@ class _MainWidgetState extends State<MainWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: Color(0xFFE2C2A2),
-                              borderRadius: 0.0,
-                              buttonSize: 50.0,
-                              fillColor: Color(0xFFE2C2A2),
-                              icon: Icon(
-                                Icons.backspace,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryBtnText,
-                                size: 30.0,
-                              ),
-                              showLoadingIndicator: true,
-                              onPressed: () async {
-                                logFirebaseEvent(
-                                    'MAIN_PAGE_backspace_ICN_ON_TAP');
-                                logFirebaseEvent('IconButton_navigate_back');
-                                context.pop();
-                              },
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 4.0, 0.0, 4.0),
                             child: Text(
                               '영어의 전설',
@@ -178,7 +154,7 @@ class _MainWidgetState extends State<MainWidget> {
                                       logFirebaseEvent('Button_ad_mob');
 
                                       admob.loadInterstitialAd(
-                                        "",
+                                        "ca-app-pub-8145739580879928/1695018528",
                                         "ca-app-pub-8145739580879928/3950518912",
                                         true,
                                       );
@@ -230,7 +206,7 @@ class _MainWidgetState extends State<MainWidget> {
                                     logFirebaseEvent('Button_ad_mob');
 
                                     admob.loadInterstitialAd(
-                                      "",
+                                      "ca-app-pub-8145739580879928/1695018528",
                                       "ca-app-pub-8145739580879928/3950518912",
                                       true,
                                     );
@@ -283,7 +259,7 @@ class _MainWidgetState extends State<MainWidget> {
                                       logFirebaseEvent('Button_ad_mob');
 
                                       admob.loadInterstitialAd(
-                                        "",
+                                        "ca-app-pub-8145739580879928/1695018528",
                                         "ca-app-pub-8145739580879928/3950518912",
                                         true,
                                       );
@@ -336,7 +312,7 @@ class _MainWidgetState extends State<MainWidget> {
                                   logFirebaseEvent('Button_ad_mob');
 
                                   admob.loadInterstitialAd(
-                                    "",
+                                    "ca-app-pub-8145739580879928/1695018528",
                                     "ca-app-pub-8145739580879928/3950518912",
                                     true,
                                   );

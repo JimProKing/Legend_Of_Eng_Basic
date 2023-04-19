@@ -37,6 +37,14 @@ class _WordWidgetState extends State<WordWidget> {
       logFirebaseEvent('WORD_PAGE_Word_ON_INIT_STATE');
       logFirebaseEvent('Word_ad_mob');
 
+      admob.loadInterstitialAd(
+        "ca-app-pub-8145739580879928/1695018528",
+        "ca-app-pub-8145739580879928/3950518912",
+        true,
+      );
+
+      logFirebaseEvent('Word_ad_mob');
+
       _model.interstitialAdSuccessW = await admob.showInterstitialAd();
     });
   }
@@ -375,6 +383,14 @@ class _WordWidgetState extends State<WordWidget> {
                                         'WORD_PAGE_DAY3_BTN_ON_TAP');
                                     logFirebaseEvent('Button_ad_mob');
 
+                                    admob.loadInterstitialAd(
+                                      "ca-app-pub-8145739580879928/1695018528",
+                                      "ca-app-pub-8145739580879928/3950518912",
+                                      true,
+                                    );
+
+                                    logFirebaseEvent('Button_ad_mob');
+
                                     _model.interstitialAd =
                                         await admob.showInterstitialAd();
 
@@ -708,6 +724,14 @@ class _WordWidgetState extends State<WordWidget> {
                                           'WORD_PAGE_DAY6_BTN_ON_TAP');
                                       logFirebaseEvent('Button_ad_mob');
 
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
+                                      logFirebaseEvent('Button_ad_mob');
+
                                       _model.interstitialAdSuccess2 =
                                           await admob.showInterstitialAd();
 
@@ -1030,6 +1054,14 @@ class _WordWidgetState extends State<WordWidget> {
                                           'WORD_PAGE_DAY9_BTN_ON_TAP');
                                       logFirebaseEvent('Button_ad_mob');
 
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
+                                      logFirebaseEvent('Button_ad_mob');
+
                                       _model.interstitialAdSuccess3 =
                                           await admob.showInterstitialAd();
 
@@ -1350,6 +1382,14 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY12_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
                                       logFirebaseEvent('Button_ad_mob');
 
                                       _model.interstitialAdSuccess4 =
@@ -1680,6 +1720,14 @@ class _WordWidgetState extends State<WordWidget> {
                                           'WORD_PAGE_DAY15_BTN_ON_TAP');
                                       logFirebaseEvent('Button_ad_mob');
 
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
+                                      logFirebaseEvent('Button_ad_mob');
+
                                       _model.interstitialAdSuccess5 =
                                           await admob.showInterstitialAd();
 
@@ -2000,6 +2048,14 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY18_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
                                       logFirebaseEvent('Button_ad_mob');
 
                                       _model.interstitialAdSuccess6 =
@@ -2324,6 +2380,14 @@ class _WordWidgetState extends State<WordWidget> {
                                           'WORD_PAGE_DAY21_BTN_ON_TAP');
                                       logFirebaseEvent('Button_ad_mob');
 
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
+                                      logFirebaseEvent('Button_ad_mob');
+
                                       _model.interstitialAdSuccess7 =
                                           await admob.showInterstitialAd();
 
@@ -2644,6 +2708,14 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY24_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
                                       logFirebaseEvent('Button_ad_mob');
 
                                       _model.interstitialAdSuccess8 =
@@ -2968,6 +3040,14 @@ class _WordWidgetState extends State<WordWidget> {
                                           'WORD_PAGE_DAY27_BTN_ON_TAP');
                                       logFirebaseEvent('Button_ad_mob');
 
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
+                                      logFirebaseEvent('Button_ad_mob');
+
                                       _model.interstitialAdSuccess9 =
                                           await admob.showInterstitialAd();
 
@@ -3288,6 +3368,14 @@ class _WordWidgetState extends State<WordWidget> {
                                   : () async {
                                       logFirebaseEvent(
                                           'WORD_PAGE_DAY30_BTN_ON_TAP');
+                                      logFirebaseEvent('Button_ad_mob');
+
+                                      admob.loadInterstitialAd(
+                                        "ca-app-pub-8145739580879928/1695018528",
+                                        "ca-app-pub-8145739580879928/3950518912",
+                                        true,
+                                      );
+
                                       logFirebaseEvent('Button_ad_mob');
 
                                       _model.interstitialAdSuccess10 =

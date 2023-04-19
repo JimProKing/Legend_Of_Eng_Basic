@@ -36,6 +36,14 @@ class _GrammerWidgetState extends State<GrammerWidget> {
       logFirebaseEvent('GRAMMER_PAGE_Grammer_ON_INIT_STATE');
       logFirebaseEvent('Grammer_ad_mob');
 
+      admob.loadInterstitialAd(
+        "ca-app-pub-8145739580879928/1695018528",
+        "ca-app-pub-8145739580879928/3950518912",
+        true,
+      );
+
+      logFirebaseEvent('Grammer_ad_mob');
+
       _model.interstitialAdSuccessG = await admob.showInterstitialAd();
     });
   }

@@ -38,6 +38,14 @@ class _ReadingWidgetState extends State<ReadingWidget> {
       logFirebaseEvent('READING_PAGE_Reading_ON_INIT_STATE');
       logFirebaseEvent('Reading_ad_mob');
 
+      admob.loadInterstitialAd(
+        "ca-app-pub-8145739580879928/1695018528",
+        "ca-app-pub-8145739580879928/3950518912",
+        true,
+      );
+
+      logFirebaseEvent('Reading_ad_mob');
+
       _model.interstitialAdSuccessR = await admob.showInterstitialAd();
     });
   }

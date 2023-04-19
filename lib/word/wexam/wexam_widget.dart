@@ -597,6 +597,14 @@ class _WexamWidgetState extends State<WexamWidget> {
                                 var _shouldSetState = false;
                                 logFirebaseEvent('Button_ad_mob');
 
+                                admob.loadInterstitialAd(
+                                  "ca-app-pub-8145739580879928/1695018528",
+                                  "ca-app-pub-8145739580879928/3950518912",
+                                  true,
+                                );
+
+                                logFirebaseEvent('Button_ad_mob');
+
                                 _model.exAdSuccess =
                                     await admob.showInterstitialAd();
 

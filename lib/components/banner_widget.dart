@@ -49,6 +49,7 @@ class _BannerWidgetState extends State<BannerWidget> {
           width: MediaQuery.of(context).size.width * 1.0,
           height: 80.0,
           showsTestAd: true,
+          iOSAdUnitID: 'ca-app-pub-8145739580879928/2032616796',
           androidAdUnitID: 'ca-app-pub-8145739580879928/6501456798',
         ),
       ],
