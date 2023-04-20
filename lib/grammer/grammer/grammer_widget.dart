@@ -182,7 +182,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFFC3DCD8),
+                            color: Color(0xFFFAEDCD),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -193,7 +193,7 @@ class _GrammerWidgetState extends State<GrammerWidget> {
                                 ),
                             elevation: 2.0,
                             borderSide: BorderSide(
-                              color: Color(0xFFE7E987),
+                              color: FlutterFlowTheme.of(context).black600,
                               width: 3.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),

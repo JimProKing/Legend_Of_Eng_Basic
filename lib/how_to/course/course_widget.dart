@@ -204,6 +204,12 @@ class _CourseWidgetState extends State<CourseWidget> {
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                  ),
+                                ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       10.0, 10.0, 10.0, 0.0),
@@ -225,91 +231,93 @@ class _CourseWidgetState extends State<CourseWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10.0, 0.0, 10.0, 0.0),
-                                      child: Text(
-                                        valueOrDefault<String>(
-                                          listViewSeriesRow.content,
-                                          '1',
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Roboto Mono',
-                                              color: Color(0xFF61686E),
-                                              fontWeight: FontWeight.w600,
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 0.0, 10.0, 0.0),
+                                          child: Text(
+                                            valueOrDefault<String>(
+                                              listViewSeriesRow.content,
+                                              '1',
                                             ),
-                                      ),
-                                    ),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 10.0, 0.0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 5.0, 0.0),
-                                              child: FlutterFlowIconButton(
-                                                borderColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                borderRadius: 20.0,
-                                                borderWidth: 2.0,
-                                                buttonSize: 50.0,
-                                                fillColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                icon: FaIcon(
-                                                  FontAwesomeIcons.google,
-                                                  color: Color(0xFF2222E6),
-                                                  size: 30.0,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Roboto Mono',
+                                                  color: Color(0xFF61686E),
+                                                  fontWeight: FontWeight.w600,
                                                 ),
-                                                onPressed: () async {
-                                                  logFirebaseEvent(
-                                                      'COURSE_PAGE_google_ICN_ON_TAP');
-                                                  logFirebaseEvent(
-                                                      'IconButton_launch_u_r_l');
-                                                  await launchURL(
-                                                      listViewSeriesRow
-                                                          .google!);
-                                                },
-                                              ),
-                                            ),
-                                            FlutterFlowIconButton(
-                                              borderColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              borderRadius: 20.0,
-                                              borderWidth: 2.0,
-                                              buttonSize: 50.0,
-                                              icon: FaIcon(
-                                                FontAwesomeIcons.apple,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .engineeringOrange,
-                                                size: 30.0,
-                                              ),
-                                              onPressed: () async {
-                                                logFirebaseEvent(
-                                                    'COURSE_PAGE_apple_ICN_ON_TAP');
-                                                logFirebaseEvent(
-                                                    'IconButton_launch_u_r_l');
-                                                await launchURL(
-                                                    listViewSeriesRow.apple!);
-                                              },
-                                            ),
-                                          ],
+                                          ),
                                         ),
-                                      ),
+                                      ],
                                     ),
                                   ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 10.0, 0.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 5.0, 0.0),
+                                        child: FlutterFlowIconButton(
+                                          borderColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primaryText,
+                                          borderRadius: 20.0,
+                                          borderWidth: 2.0,
+                                          buttonSize: 50.0,
+                                          fillColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primaryBackground,
+                                          icon: FaIcon(
+                                            FontAwesomeIcons.google,
+                                            color: Color(0xFF2222E6),
+                                            size: 30.0,
+                                          ),
+                                          onPressed: () async {
+                                            logFirebaseEvent(
+                                                'COURSE_PAGE_google_ICN_ON_TAP');
+                                            logFirebaseEvent(
+                                                'IconButton_launch_u_r_l');
+                                            await launchURL(
+                                                listViewSeriesRow.google!);
+                                          },
+                                        ),
+                                      ),
+                                      FlutterFlowIconButton(
+                                        borderColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                        borderRadius: 20.0,
+                                        borderWidth: 2.0,
+                                        buttonSize: 50.0,
+                                        icon: FaIcon(
+                                          FontAwesomeIcons.apple,
+                                          color: FlutterFlowTheme.of(context)
+                                              .engineeringOrange,
+                                          size: 30.0,
+                                        ),
+                                        onPressed: () async {
+                                          logFirebaseEvent(
+                                              'COURSE_PAGE_apple_ICN_ON_TAP');
+                                          logFirebaseEvent(
+                                              'IconButton_launch_u_r_l');
+                                          await launchURL(
+                                              listViewSeriesRow.apple!);
+                                        },
+                                      ),
+                                    ],
+                                  ),
                                 ),
                                 Divider(
                                   thickness: 2.5,

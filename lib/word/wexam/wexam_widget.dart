@@ -1,5 +1,4 @@
 import '/backend/supabase/supabase.dart';
-import '/components/banner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -106,7 +105,7 @@ class _WexamWidgetState extends State<WexamWidget> {
         backgroundColor: Color(0xFFF2F5FE),
         appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.22),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
           child: AppBar(
             backgroundColor: Color(0xFFE2C2A2),
             automaticallyImplyLeading: false,
@@ -119,13 +118,6 @@ class _WexamWidgetState extends State<WexamWidget> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: wrapWithModel(
-                        model: _model.bannerModel,
-                        updateCallback: () => setState(() {}),
-                        child: BannerWidget(),
-                      ),
-                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
@@ -248,7 +240,7 @@ class _WexamWidgetState extends State<WexamWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width * 1.0,
-                      height: MediaQuery.of(context).size.height * 0.6,
+                      height: MediaQuery.of(context).size.height * 0.66,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         boxShadow: [
@@ -563,6 +555,113 @@ class _WexamWidgetState extends State<WexamWidget> {
                               ),
                             ),
                           ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 0.0, 20.0, 10.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 0.0, 10.0),
+                                  child: FFButtonWidget(
+                                    onPressed: FFAppState()
+                                            .fwns
+                                            .contains(widget.wordDay)
+                                        ? null
+                                        : () async {
+                                            logFirebaseEvent(
+                                                'WEXAM_PAGE_FINISH_BTN_ON_TAP');
+                                            var _shouldSetState = false;
+                                            logFirebaseEvent('Button_ad_mob');
+
+                                            admob.loadInterstitialAd(
+                                              "ca-app-pub-8145739580879928/1695018528",
+                                              "ca-app-pub-8145739580879928/3950518912",
+                                              true,
+                                            );
+
+                                            logFirebaseEvent('Button_ad_mob');
+
+                                            _model.exAdSuccess = await admob
+                                                .showInterstitialAd();
+
+                                            _shouldSetState = true;
+                                            if (_model.cC == 30) {
+                                              logFirebaseEvent(
+                                                  'Button_update_app_state');
+                                              setState(() {
+                                                FFAppState()
+                                                    .addToFwns(widget.wordDay!);
+                                              });
+                                            } else {
+                                              logFirebaseEvent(
+                                                  'Button_alert_dialog');
+                                              await showDialog(
+                                                context: context,
+                                                builder: (alertDialogContext) {
+                                                  return AlertDialog(
+                                                    title: Text('시험 미완료'),
+                                                    content:
+                                                        Text('문제를 다 풀어주세요!'),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext),
+                                                        child: Text('Ok'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                              if (_shouldSetState)
+                                                setState(() {});
+                                              return;
+                                            }
+
+                                            logFirebaseEvent(
+                                                'Button_navigate_to');
+
+                                            context.pushNamed('Word');
+
+                                            if (_shouldSetState)
+                                              setState(() {});
+                                          },
+                                    text: 'finish',
+                                    options: FFButtonOptions(
+                                      width: 130.0,
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Color(0xC1D1A7A7),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Roboto Mono',
+                                            color: FlutterFlowTheme.of(context)
+                                                .chocolateCosmos,
+                                          ),
+                                      elevation: 2.0,
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      disabledColor:
+                                          FlutterFlowTheme.of(context)
+                                              .lineColor,
+                                      disabledTextColor: Color(0xFF57636C),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -577,98 +676,6 @@ class _WexamWidgetState extends State<WexamWidget> {
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 10.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 60.0),
-                      child: FFButtonWidget(
-                        onPressed: FFAppState().fwns.contains(widget.wordDay)
-                            ? null
-                            : () async {
-                                logFirebaseEvent(
-                                    'WEXAM_PAGE_FINISH_BTN_ON_TAP');
-                                var _shouldSetState = false;
-                                logFirebaseEvent('Button_ad_mob');
-
-                                admob.loadInterstitialAd(
-                                  "ca-app-pub-8145739580879928/1695018528",
-                                  "ca-app-pub-8145739580879928/3950518912",
-                                  true,
-                                );
-
-                                logFirebaseEvent('Button_ad_mob');
-
-                                _model.exAdSuccess =
-                                    await admob.showInterstitialAd();
-
-                                _shouldSetState = true;
-                                if (_model.cC == 30) {
-                                  logFirebaseEvent('Button_update_app_state');
-                                  setState(() {
-                                    FFAppState().addToFwns(widget.wordDay!);
-                                  });
-                                } else {
-                                  logFirebaseEvent('Button_alert_dialog');
-                                  await showDialog(
-                                    context: context,
-                                    builder: (alertDialogContext) {
-                                      return AlertDialog(
-                                        title: Text('시험 미완료'),
-                                        content: Text('문제를 다 풀어주세요!'),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(
-                                                alertDialogContext),
-                                            child: Text('Ok'),
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  );
-                                  if (_shouldSetState) setState(() {});
-                                  return;
-                                }
-
-                                logFirebaseEvent('Button_navigate_to');
-
-                                context.pushNamed('Word');
-
-                                if (_shouldSetState) setState(() {});
-                              },
-                        text: 'finish',
-                        options: FFButtonOptions(
-                          width: 130.0,
-                          height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xC1D1A7A7),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Roboto Mono',
-                                    color: FlutterFlowTheme.of(context)
-                                        .chocolateCosmos,
-                                  ),
-                          elevation: 2.0,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                          disabledColor: FlutterFlowTheme.of(context).lineColor,
-                          disabledTextColor: Color(0xFF57636C),
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
             ],
