@@ -14,6 +14,58 @@
       },
       "oauth_client": [
         {
+          "client_id": "399564176676-rliid79s86522k481a30a62ett7t2t7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.helloflutterflow",
+            "certificate_hash": "7b4d7320742691ffba8d3006a068424f35f53d33"
+          }
+        },
+        {
+          "client_id": "399564176676-cp6h0dlf6o3o9ped543qi4ivhs5b3onp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5ggFHbgW0koMDHpvjKYSo7IOE2uvtO3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399564176676-cp6h0dlf6o3o9ped543qi4ivhs5b3onp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399564176676-ktkb92nvnoachpqh377l8idbrkqv4btr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.helloflutterflow"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399564176676:android:a3f48f8c96f4651d7e07b1",
+        "android_client_info": {
+          "package_name": "com.mycompany.legendofopic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399564176676-6l6o9ms052f4g93rak815jjmss92o26d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.legendofopic",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
           "client_id": "399564176676-cp6h0dlf6o3o9ped543qi4ivhs5b3onp.apps.googleusercontent.com",
           "client_type": 3
         }
